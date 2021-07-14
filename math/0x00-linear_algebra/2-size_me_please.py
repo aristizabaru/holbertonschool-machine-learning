@@ -9,12 +9,12 @@ def matrix_shape(matrix):
         matrix (list): matrix to be evaluated
 
     Returns:
-        result (list): list of integers desribing the matrix shape
+        shape_matrix (list): list of integers desribing the matrix shape
     """
     # base case
     if type(matrix) is int:
         return []
 
-    result = matrix_shape(matrix[0])
-    result.insert(0, len(matrix))
-    return result
+    shape_matrix = matrix_shape(matrix[0])
+    shape_matrix.insert(0, len(matrix))
+    return shape_matrix
