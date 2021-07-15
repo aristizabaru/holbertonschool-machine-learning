@@ -15,6 +15,7 @@ def np_slice(matrix, axes={}):
         numpy.ndarray: sliced matrix
     """
     slices = []
+    # find all available axes
     for i in range(len(matrix.shape)):
         if i in axes:
             # unpack elements to slice function
