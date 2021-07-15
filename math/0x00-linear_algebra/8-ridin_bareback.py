@@ -3,6 +3,15 @@
 
 
 def mat_mul(mat1, mat2):
+    """Performs matrix multiplication
+
+    Args:
+        mat1 (list): matrix A
+        mat2 (list): matrix B
+
+    Returns:
+        matrix_product (list): product of mat1 * mat2
+    """
     if len(mat1[0]) != len(mat2):
         return
 
