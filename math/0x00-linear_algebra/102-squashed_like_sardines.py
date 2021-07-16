@@ -13,14 +13,11 @@ def cat_matrices(mat1, mat2, axis=0):
     Returns:
         list: concatenated matrix. None if it can't be done
     """
-
-    if matrix_shape(mat1) != matrix_shape(mat2):
-        return
-
-    if not axis:
+    # check if columns are equals
+    if not axis and matrix_shape(mat1) == matrix_shape(mat2):
         return mat1 + mat2
     # check if rows are equals
-    elif axis == 1:
+    elif axis == 1 and len(mat1) == len(mat2):
         return [mat1[row] + mat2[row] for row in range(len(mat1))]
 
 
