@@ -17,8 +17,11 @@ def cat_matrices(mat1, mat2, axis=0):
     if not axis and matrix_shape(mat1) == matrix_shape(mat2):
         return mat1 + mat2
     # check if rows are equals
-    elif axis == 1 and len(mat1) == len(mat2):
+    if axis == 1 and len(mat1) == len(mat2):
         return [mat1[row] + mat2[row] for row in range(len(mat1))]
+
+    if axis == 3 and len(mat1[0]) == len(mat2[0]):
+        return mat1 + mat2
 
 
 def matrix_shape(matrix):
