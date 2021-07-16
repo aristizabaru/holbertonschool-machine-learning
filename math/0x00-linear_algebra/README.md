@@ -2,7 +2,7 @@
 
 ## About
 
-This is an educational project exploring concepts about **Linear Algebra** towards a Machine Learning formation.
+This is an educational project exploring concepts about **Linear Algebra** towards a formation in Machine Learning.
 
 ## Table of contents
 
