@@ -54,7 +54,7 @@ Before start please read or watch this concepts
 
 ## Machine Learning lessons
 
-This project is conceived to be carried out step by step, that is why the description of the files is presented as a statement.
+This project is structured under the methodology of sequential lessons (tests) under each major topic. To know and develop each topic please enter each lesson and follow the instructions.
 
 ### Math
 
