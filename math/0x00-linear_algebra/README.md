@@ -36,7 +36,7 @@ This is an educational project exploring concepts about **Linear Algebra** towar
 
 ### Dependencies
 
-- Please refer at the [requirements.txt](../../requirements.txt) file at the root of this repository.
+Please refer at the [requirements.txt](../../requirements.txt) file at the root of this repository.
 
 ## Topics
 
@@ -56,6 +56,8 @@ This is an educational project exploring concepts about **Linear Algebra** towar
 - What is broadcasting?
 
 ## Read or watch
+
+Before start please read or watch this concepts.
 
 - [Introduction to vectors](https://www.youtube.com/watch?v=fNk_zzaMoSs)
 - [What is a matrix?](https://math.stackexchange.com/questions/2782717/what-exactly-is-a-matrix)
@@ -84,7 +86,7 @@ This is an educational project exploring concepts about **Linear Algebra** towar
 
 ## Files
 
-This project is conceived to be carried out step by step, that is why the description of the files is presented as a statement.
+This project (lesson) is conceived to be carried out step by step, that is why the description of the files is presented as a statement.
 
 ### 0. Slice Me Up
 
