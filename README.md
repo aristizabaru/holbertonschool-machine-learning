@@ -25,9 +25,16 @@ Please refer at the [requirements.txt](requirements.txt) file to install all dep
 
 ```
 autopep8==1.5.7
+cycler==0.10.0
+kiwisolver==1.3.1
+matplotlib==3.0.0
 numpy==1.15.0
+Pillow==8.3.1
 pycodestyle==2.7.0
+pyparsing==2.4.7
+python-dateutil==2.8.2
 scipy==1.3.0
+six==1.16.0
 toml==0.10.2
 ```
 
