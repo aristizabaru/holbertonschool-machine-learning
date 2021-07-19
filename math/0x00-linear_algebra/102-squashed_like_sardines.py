@@ -4,12 +4,10 @@
 
 def cat_matrices(mat1, mat2, axis=0):
     """Concatenates two matrices along a specific axis
-
     Args:
         mat1 (list): matrix of int/floats
         mat2 list): matrix of int/floats
         axis (int, optional): axis to perform concatenation. Defaults to 0.
-
     Returns:
         list: concatenated matrix. None if it can't be done
     """
@@ -26,10 +24,8 @@ def cat_matrices(mat1, mat2, axis=0):
 
 def matrix_shape(matrix):
     """Calculates the shape of a matrix with the same dimension
-
     Args:
         matrix (list): matrix to be evaluated
-
     Returns:
         shape_matrix (list): list of integers desribing the matrix shape
     """
