@@ -7,34 +7,26 @@ This is an educational project exploring concepts about **Plotting** towards a f
 ## Table of contents
 
 - [Requirements](#requirements)
+  - [Installing Matplotlib 3.0](#installing-matplotlib-3)
   - [Dependencies](#dependencies)
 - [Topics](#topics)
 - [Read or watch](#read-or-watch)
 - [Files](#files)
-  - [0. Slice Me Up](#0-slice-me-up)
-  - [1. Trim Me Down](#1-trim-me-down)
-  - [2. Size Me Please](#2-size-me-please)
-  - [3. Flip Me Over](#3-flip-me-over)
-  - [4. Line Up](#4-line-up)
-  - [5. Across The Planes](#5-across-the-planes)
-  - [6. Howdy Partner](#6-howdy-partner)
-  - [7. Gettin’ Cozy](#7-gettin-cozy)
-  - [8. Ridin’ Bareback](#8-ridin-bareback)
-  - [9. Let The Butcher Slice It](#9-let-the-butcher-slice-it)
-  - [10. I’ll Use My Scale](#10-ill-use-my-scale)
-  - [11. The Western Exchange](#11-the-western-exchange)
-  - [12. Bracing The Elements](#12-bracing-the-elements)
-  - [13. Cat's Got Your Tongue](#13-cats-got-your-tongue)
-  - [14. Saddle Up](#14-saddle-up)
-  - [15. Slice Like A Ninja](#15-slice-like-a-ninja)
-  - [16. The Whole Barn](#16-the-whole-barn)
-  - [17. Squashed Like Sardines](#17-squashed-like-sardines)
+  - [0. Line Graph](#0-line-graph)
+  - [1. Scatter](#1-satter)
+  - [2. Change of scale](#2-change-of-scale)
+  - [3. Two is better than one](#3-two-is-better-than-one)
+  - [4. Frequency](#4-frequency)
+  - [5. All in One](#5-all-in-one)
+  - [6. Stacking Bars](#6-stacking-bars)
+  - [7. Gradient](#7-gradient)
+  - [8. PCA](#8-pca)
 
 ## Requirements
 
 - Python 3.6.14
 
-### Isntalling Matplotlib 3.0
+### Installing Matplotlib 3.0
 
 ```
 pip install --user matplotlib==3.0
