@@ -65,4 +65,5 @@ This project is structured under the methodology of sequential lessons (tests) u
 
 ### Math
 
-- [0x00-Linear Algebra](math/0x00-linear_algebra)
+- [0x00 Linear Algebra](math/0x00-linear_algebra)
+- [0x01 Plotting](math/0x01-plotting)
