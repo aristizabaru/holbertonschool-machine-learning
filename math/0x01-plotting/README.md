@@ -34,804 +34,349 @@ This is an educational project exploring concepts about **Plotting** towards a f
 
 - Python 3.6.14
 
+### Isntalling Matplotlib 3.0
+
+```
+pip install --user matplotlib==3.0
+pip install --user Pillow
+sudo apt-get install python3-tk
+```
+
 ### Dependencies
 
 Please refer at the [requirements.txt](../../requirements.txt) file at the root of this repository.
 
 ## Topics
 
-- What is a vector?
-- What is a matrix?
-- What is a transpose?
-- What is the shape of a matrix?
-- What is an axis?
-- What is a slice?
-- How do you slice a vector/matrix?
-- What are element-wise operations?
-- How do you concatenate vectors/matrices?
-- What is the dot product?
-- What is matrix multiplication?
-- What is `Numpy`?
-- What is parallelization and why is it important?
-- What is broadcasting?
+- What is a plot?
+- What is a scatter plot? line graph? bar graph? histogram?
+- What is `matplotlib`?
+- How to plot data with `matplotlib`
+- How to label a plot
+- How to scale an axis
+- How to plot multiple sets of data at the same time
 
 ## Read or watch
 
 Before start please read or watch this concepts.
 
-- [Introduction to vectors](https://www.youtube.com/watch?v=fNk_zzaMoSs)
-- [What is a matrix?](https://math.stackexchange.com/questions/2782717/what-exactly-is-a-matrix)
-- [Transpose](https://en.wikipedia.org/wiki/Transpose)
-- [Understanding the dot product](https://betterexplained.com/articles/vector-calculus-understanding-the-dot-product/)
-- [Matrix Multiplication](https://www.youtube.com/watch?v=BzWahqwaS8k)
-- [What is the relationship between matrix multiplication and the dot product?](https://www.quora.com/What-is-the-relationship-between-matrix-multiplication-and-the-dot-product)
-- [The Dot Product, Matrix Multiplication, and the Magic of Orthogonal Matrices](https://www.youtube.com/watch?v=rW2ypKLLxGk) (advanced)
-- [numpy tutorial](https://numpy.org/doc/stable/user/quickstart.html) (until Shape Manipulation (excluded))
-- [numpy basics](https://www.oreilly.com/library/view/python-for-data/9781449323592/ch04.html) (until Universal Functions (included))
-- [array indexing](https://docs.scipy.org/doc/numpy-1.15.0/reference/arrays.indexing.html#basic-slicing-and-indexing)
-- [numerical operations on arrays](http://scipy-lectures.org/intro/numpy/operations.html)
-- [Broadcasting](https://numpy.org/doc/stable/user/basics.broadcasting.html)
-- [numpy mutations and broadcasting](https://towardsdatascience.com/two-cool-features-of-python-numpy-mutating-by-slicing-and-broadcasting-3b0b86e8b4c7?gi=41a9177ec6a9)
-- [numpy.ndarray](https://docs.scipy.org/doc/numpy-1.15.0/reference/arrays.ndarray.html)
-- [numpy.ndarray.shape](https://docs.scipy.org/doc/numpy-1.15.0/reference/generated/numpy.ndarray.shape.html#numpy.ndarray.shape)
-- [numpy.transpose](https://numpy.org/doc/stable/reference/generated/numpy.transpose.html)
-- [numpy.ndarray.transpose](https://numpy.org/doc/stable/reference/generated/numpy.ndarray.transpose.html)
-- [numpy.matmul](https://numpy.org/doc/stable/reference/generated/numpy.matmul.html)
+- [Plot (graphics)](https://en.wikipedia.org/wiki/Plot_%28graphics%29)
+- [Scatter plot](https://en.wikipedia.org/wiki/Scatter_plot)
+- [Line chart](https://en.wikipedia.org/wiki/Line_chart)
+- [Bar chart](https://en.wikipedia.org/wiki/Bar_chart)
+- [Histogram](https://en.wikipedia.org/wiki/Histogram)
+- [Pyplot tutorial](https://matplotlib.org/stable/tutorials/introductory/pyplot.html)
+- [matplotlib.pyplot](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.html)
+- [matplotlib.pyplot.plot](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html)
+- [matplotlib.pyplot.scatter](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.scatter.html)
+- [matplotlib.pyplot.bar](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.bar.html)
+- [matplotlib.pyplot.hist](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.hist.html)
+- [matplotlib.pyplot.xlabel](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.xlabel.html)
+- [matplotlib.pyplot.ylabel](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.ylabel.html)
+- [matplotlib.pyplot.title](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.title.html)
+- [matplotlib.pyplot.subplot](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplot.html)
+- [matplotlib.pyplot.subplots](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplots.html)
+- [matplotlib.pyplot.subplot2grid](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplot2grid.html)
+- [matplotlib.pyplot.suptitle](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.suptitle.html)
+- [matplotlib.pyplot.xscale](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.xscale.html)
+- [matplotlib.pyplot.yscale](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.yscale.html)
+- [matplotlib.pyplot.xlim](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.xlim.html)
+- [matplotlib.pyplot.ylim](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.ylim.html)
+- [mplot3d tutorial](https://matplotlib.org/2.0.2/mpl_toolkits/mplot3d/tutorial.html)
+- [additional tutorials](https://matplotlib.org/stable/tutorials/index.html)
 
 **Extra**
 
-- [Essence of linear algebra](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
-- [Vectores](https://www.youtube.com/playlist?list=PLeySRPnY35dEaZT3iJUNdDkgLEZE5x-Jd) (spanish content)
-- [Matrices](https://www.youtube.com/playlist?list=PLeySRPnY35dEr2XewNdOjOl7Ft0tLIlKI) (spanish content)
+- [Corey Shafer's Matplotlib Tutorials](https://www.youtube.com/playlist?list=PL-osiE80TeTvipOqomVEeZ1HRrcEvtZB_)
+- [Diagrama de dispersión (spanish content)](https://www.youtube.com/watch?v=KwtuSe1JAVQ)
+- [Coeficiente de corelación lineal (spanish content)](https://www.youtube.com/watch?v=aKsjilxc5ww)
+- [¿Cómo trazar un diagrama de dispersión (spanish content)](https://www.youtube.com/watch?v=31OwPATTjrc)
+- [El gráfico de líneas (spanish content)](https://www.youtube.com/watch?v=D70LOsWSsBs)
+- [¿Qué son y cómo elaborar gráficos de barras? (spanish content)](https://www.youtube.com/watch?v=cPrq6wTFQbQ)
+- [Histogramas - Ojiva y polígonos de frecuencia (spanish content)](https://www.youtube.com/watch?v=eY2xqiT_FF4)
+- [Escala logarítmica (spanish content)](https://www.youtube.com/watch?v=DBz5dsoZm_w)
+- [Stacked Bar Graph | Matplotlib](https://www.youtube.com/watch?v=fOJycZMxuoQ)
+- [Developing Advanced Plots with Matplotlib : Plotting with 3D Axes](https://www.youtube.com/watch?v=wJQIGXSq504)
 
 ## Files
 
 This project (lesson) is conceived to be carried out step by step, that is why the description of the files is presented as a statement.
 
-### 0. Slice Me Up
+### 0. Line Graph
 
-**[0-slice_me_up.py](0-slice_me_up.py)**
+**[0-line.py](0-line.py)**
 
-Complete the following source code (found below):
+Complete the following source code to plot `y` as a line graph:
 
-- `arr1` should be the first two numbers of `arr`
-- `arr2` should be the last five numbers of `arr`
-- `arr3` should be the 2nd through 6th numbers of `arr`
-- You are not allowed to use any loops or conditional statements
-- Your program should be exactly 8 lines
+- `y` should be plotted as a solid red line
+- The x-axis should range from 0 to 10
 
 ```
-alexa@ubuntu-xenial:0x00-linear_algebra$ cat 0-slice_me_up.py
 #!/usr/bin/env python3
-arr = [9, 8, 2, 3, 9, 4, 1, 0, 3]
-arr1 =  # your code here
-arr2 =  # your code here
-arr3 =  # your code here
-print("The first two numbers of the array are: {}".format(arr1))
-print("The last five numbers of the array are: {}".format(arr2))
-print("The 2nd through 6th numbers of the array are: {}".format(arr3))
-alexa@ubuntu-xenial:0x00-linear_algebra$ ./0-slice_me_up.py
-The first two numbers of the array are: [9, 8]
-The last five numbers of the array are: [9, 4, 1, 0, 3]
-The 2nd through 6th numbers of the array are: [8, 2, 3, 9, 4]
-alexa@ubuntu-xenial:0x00-linear_algebra$ wc -l 0-slice_me_up.py
-8 0-slice_me_up.py
-alexa@ubuntu-xenial:0x00-linear_algebra$
-```
+import numpy as np
+import matplotlib.pyplot as plt
 
-### 1. Trim Me Down
+y = np.arange(0, 11) ** 3
 
-**[1-trim_me_down.py](1-trim_me_down.py)**
-
-Complete the following source code (found below):
-
-- `the_middle` should be a 2D matrix containing the 3rd and 4th columns of `matrix`
-- You are not allowed to use any conditional statements
-- You are only allowed to use one `for` loop
-- Your program should be exactly 6 lines
-
-```
-alexa@ubuntu-xenial:0x00-linear_algebra$ cat 1-trim_me_down.py
-#!/usr/bin/env python3
-matrix = [[1, 3, 9, 4, 5, 8], [2, 4, 7, 3, 4, 0], [0, 3, 4, 6, 1, 5]]
-the_middle = []
 # your code here
-print("The middle columns of the matrix are: {}".format(the_middle))
-alexa@ubuntu-xenial:0x00-linear_algebra$ ./1-trim_me_down.py
-The middle columns of the matrix are: [[9, 4], [7, 3], [4, 6]]
-alexa@ubuntu-xenial:0x00-linear_algebra$ wc -l 1-trim_me_down.py
-6 1-trim_me_down.py
-alexa@ubuntu-xenial:0x00-linear_algebra$
 ```
 
-### 2. Size Me Please
+![alt plot](./graphs/1.png)
 
-**[2-size_me_please.py](2-size_me_please.py)**
+### 1. Scatter
 
-Write a function def `matrix_shape(matrix):` that calculates the shape of a matrix:
+**[1-scatter.py](1-scatter.py)**
 
-- You can assume all elements in the same dimension are of the same type/shape
-- The shape should be returned as a list of integers
+Complete the following source code to plot `x ↦ y` as a scatter plot:
 
-```
-alexa@ubuntu-xenial:0x00-linear_algebra$ cat 2-main.py
-#!/usr/bin/env python3
-
-matrix_shape = __import__('2-size_me_please').matrix_shape
-
-mat1 = [[1, 2], [3, 4]]
-print(matrix_shape(mat1))
-mat2 = [[[1, 2, 3, 4, 5], [6, 7, 8, 9, 10], [11, 12, 13, 14, 15]],
-        [[16, 17, 18, 19, 20], [21, 22, 23, 24, 25], [26, 27, 28, 29, 30]]]
-print(matrix_shape(mat2))
-alexa@ubuntu-xenial:0x00-linear_algebra$ ./2-main.py
-[2, 2]
-[2, 3, 5]
-alexa@ubuntu-xenial:0x00-linear_algebra$
-```
-
-### 3. Flip Me Over
-
-**[3-flip_me_over.py](3-flip_me_over.py)**
-
-Write a function def `matrix_transpose(matrix):` that returns the transpose of a 2D matrix, `matrix`:
-
-- You must return a new matrix
-- You can assume that `matrix` is never empty
-- You can assume all elements in the same dimension are of the same type/shape
+- The x-axis should be labeled `Height (in)`
+- The y-axis should be labeled `Weight (lbs)`
+- The title should be `Men's Height vs Weight`
+- The data should be plotted as magenta points
 
 ```
-alexa@ubuntu-xenial:0x00-linear_algebra$ cat 3-main.py
-#!/usr/bin/env python3
-
-matrix_transpose = __import__('3-flip_me_over').matrix_transpose
-
-mat1 = [[1, 2], [3, 4]]
-print(mat1)
-print(matrix_transpose(mat1))
-mat2 = [[1, 2, 3, 4, 5], [6, 7, 8, 9, 10], [11, 12, 13, 14, 15],
-        [16, 17, 18, 19, 20], [21, 22, 23, 24, 25], [26, 27, 28, 29, 30]]
-print(mat2)
-print(matrix_transpose(mat2))
-alexa@ubuntu-xenial:0x00-linear_algebra$ ./3-main.py
-[[1, 2], [3, 4]]
-[[1, 3], [2, 4]]
-[[1, 2, 3, 4, 5], [6, 7, 8, 9, 10], [11, 12, 13, 14, 15], [16, 17, 18, 19, 20], [21, 22, 23, 24, 25], [26, 27, 28, 29, 30]]
-[[1, 6, 11, 16, 21, 26], [2, 7, 12, 17, 22, 27], [3, 8, 13, 18, 23, 28], [4, 9, 14, 19, 24, 29], [5, 10, 15, 20, 25, 30]]
-alexa@ubuntu-xenial:0x00-linear_algebra$
-```
-
-### 4. Line Up
-
-**[4-line_up.py](4-line_up.py)**
-
-Write a function `def add_arrays(arr1, arr2):` that adds two arrays element-wise:
-
-- You can assume that `arr1` and `arr2` are lists of ints/floats
-- You must return a new list
-- If `arr1` and `arr2` are not the same shape, return `None`
-
-```
-alexa@ubuntu-xenial:0x00-linear_algebra$ cat 4-main.py
-#!/usr/bin/env python3
-
-add_arrays = __import__('4-line_up').add_arrays
-
-arr1 = [1, 2, 3, 4]
-arr2 = [5, 6, 7, 8]
-print(add_arrays(arr1, arr2))
-print(arr1)
-print(arr2)
-print(add_arrays(arr1, [1, 2, 3]))
-alexa@ubuntu-xenial:0x00-linear_algebra$ ./4-main.py
-[6, 8, 10, 12]
-[1, 2, 3, 4]
-[5, 6, 7, 8]
-None
-alexa@ubuntu-xenial:0x00-linear_algebra$
-```
-
-### 5. Across The Planes
-
-**[5-across_the_planes.py](5-across_the_planes.py)**
-
-Write a function def `add_matrices2D(mat1, mat2):` that adds two matrices element-wise:
-
-- You can assume that `mat1` and `mat2` are 2D matrices containing ints/floats
-- You can assume all elements in the same dimension are of the same type/shape
-- You must return a new matrix
-- If `mat1` and `mat2` are not the same shape, return `None`
-
-```
-alexa@ubuntu-xenial:0x00-linear_algebra$ cat 5-main.py
-#!/usr/bin/env python3
-
-add_matrices2D = __import__('5-across_the_planes').add_matrices2D
-
-mat1 = [[1, 2], [3, 4]]
-mat2 = [[5, 6], [7, 8]]
-print(add_matrices2D(mat1, mat2))
-print(mat1)
-print(mat2)
-print(add_matrices2D(mat1, [[1, 2, 3], [4, 5, 6]]))
-alexa@ubuntu-xenial:0x00-linear_algebra$ ./5-main.py
-[[6, 8], [10, 12]]
-[[1, 2], [3, 4]]
-[[5, 6], [7, 8]]
-None
-alexa@ubuntu-xenial:0x00-linear_algebra$
-```
-
-### 6. Howdy Partner
-
-**[6-howdy_partner.py](6-howdy_partner.py)**
-
-Write a function `def cat_arrays(arr1, arr2):` that concatenates two arrays:
-
-- You can assume that `arr1` and `arr2` are lists of ints/floats
-- You must return a new list
-
-```
-alexa@ubuntu-xenial:0x00-linear_algebra$ cat 6-main.py
-#!/usr/bin/env python3
-
-cat_arrays = __import__('6-howdy_partner').cat_arrays
-
-arr1 = [1, 2, 3, 4, 5]
-arr2 = [6, 7, 8]
-print(cat_arrays(arr1, arr2))
-print(arr1)
-print(arr2)
-alexa@ubuntu-xenial:0x00-linear_algebra$ ./6-main.py
-[1, 2, 3, 4, 5, 6, 7, 8]
-[1, 2, 3, 4, 5]
-[6, 7, 8]
-alexa@ubuntu-xenial:0x00-linear_algebra$
-```
-
-### 7. Gettin’ Cozy
-
-**[7-gettin_cozy.py](7-gettin_cozy.py)**
-
-Write a function `def cat_matrices2D(mat1, mat2, axis=0):` that concatenates two matrices along a specific axis:
-
-- You can assume that `mat1` and `mat2` are 2D matrices containing ints/floats
-- You can assume all elements in the same dimension are of the same type/shape
-- You must return a new matrix
-- If the two matrices cannot be concatenated, return `None`
-
-```
-alexa@ubuntu-xenial:0x00-linear_algebra$ cat 7-main.py
-#!/usr/bin/env python3
-
-cat_matrices2D = __import__('7-gettin_cozy').cat_matrices2D
-
-mat1 = [[1, 2], [3, 4]]
-mat2 = [[5, 6]]
-mat3 = [[7], [8]]
-mat4 = cat_matrices2D(mat1, mat2)
-mat5 = cat_matrices2D(mat1, mat3, axis=1)
-print(mat4)
-print(mat5)
-mat1[0] = [9, 10]
-mat1[1].append(5)
-print(mat1)
-print(mat4)
-print(mat5)
-alexa@ubuntu-xenial:0x00-linear_algebra$ ./7-main.py
-[[1, 2], [3, 4], [5, 6]]
-[[1, 2, 7], [3, 4, 8]]
-[[9, 10], [3, 4, 5]]
-[[1, 2], [3, 4], [5, 6]]
-[[1, 2, 7], [3, 4, 8]]
-alexa@ubuntu-xenial:0x00-linear_algebra$
-```
-
-### 8. Ridin’ Bareback
-
-**[8-ridin_bareback.py](8-ridin_bareback.py)**
-
-Write a function `def mat_mul(mat1, mat2):` that performs matrix multiplication:
-
-- You can assume that `mat1` and `mat2` are 2D matrices containing ints/floats
-- You can assume all elements in the same dimension are of the same type/shape
-- You must return a new matrix
-- If the two matrices cannot be multiplied, return `None`
-
-```
-alexa@ubuntu-xenial:0x00-linear_algebra$ cat 8-main.py
-#!/usr/bin/env python3
-
-mat_mul = __import__('8-ridin_bareback').mat_mul
-
-mat1 = [[1, 2],
-        [3, 4],
-        [5, 6]]
-mat2 = [[1, 2, 3, 4],
-        [5, 6, 7, 8]]
-print(mat_mul(mat1, mat2))
-alexa@ubuntu-xenial:0x00-linear_algebra$ ./8-main.py
-[[11, 14, 17, 20], [23, 30, 37, 44], [35, 46, 57, 68]]
-alexa@ubuntu-xenial:0x00-linear_algebra$
-```
-
-### 9. Let The Butcher Slice It
-
-**[9-let_the_butcher_slice_it.py](9-let_the_butcher_slice_it.py)**
-
-Complete the following source code (found below):
-
-- `mat1` should be the middle two rows of `matrix`
-- `mat2` should be the middle two columns of `matrix`
-- `mat3` should be the bottom-right, square, 3x3 matrix of `matrix`
-- You are not allowed to use any loops or conditional statements
-- Your program should be exactly 10 lines
-
-```
-alexa@ubuntu-xenial:0x00-linear_algebra$ cat 9-let_the_butcher_slice_it.py
 #!/usr/bin/env python3
 import numpy as np
-matrix = np.array([[1, 2, 3, 4, 5, 6], [7, 8, 9, 10, 11, 12],
-                   [13, 14, 15, 16, 17, 18], [19, 20, 21, 22, 23, 24]])
-mat1 =  # your code here
-mat2 =  # your code here
-mat3 =  # your code here
-print("The middle two rows of the matrix are:\n{}".format(mat1))
-print("The middle two columns of the matrix are:\n{}".format(mat2))
-print("The bottom-right, square, 3x3 matrix is:\n{}".format(mat3))
-alexa@ubuntu-xenial:0x00-linear_algebra$ ./9-let_the_butcher_slice_it.py
-The middle two rows of the matrix are:
-[[ 7  8  9 10 11 12]
- [13 14 15 16 17 18]]
-The middle two columns of the matrix are:
-[[ 3  4]
- [ 9 10]
- [15 16]
- [21 22]]
-The bottom-right, square, 3x3 matrix is:
-[[10 11 12]
- [16 17 18]
- [22 23 24]]
-alexa@ubuntu-xenial:0x00-linear_algebra$ wc -l 9-let_the_butcher_slice_it.py
-10 9-let_the_butcher_slice_it.py
-alexa@ubuntu-xenial:0x00-linear_algebra$
+import matplotlib.pyplot as plt
+
+mean = [69, 0]
+cov = [[15, 8], [8, 15]]
+np.random.seed(5)
+x, y = np.random.multivariate_normal(mean, cov, 2000).T
+y += 180
+
+# your code here
 ```
 
-### 10. I’ll Use My Scale
+![alt plot](./graphs/2.png)
 
-**[10-ill_use_my_scale.py](10-ill_use_my_scale.py)**
+### 2. Change of scale
 
-Write a function `def np_shape(matrix):` that calculates the shape of a `numpy.ndarray`:
+**[2-change_scale.py](2-change_scale.py)**
 
-- You are not allowed to use any loops or conditional statements
-- You are not allowed to use `try/except` statements
-- The shape should be returned as a tuple of integers
+Complete the following source code to plot `x ↦ y` as a line graph:
+
+- The x-axis should be labeled `Time (years)`
+- The y-axis should be labeled `Fraction Remaining`
+- The title should be `Exponential Decay of C-14`
+- The y-axis should be logarithmically scaled
+- The x-axis should range from 0 to 28650
 
 ```
-alexa@ubuntu-xenial:0x00-linear_algebra$ cat 10-main.py
 #!/usr/bin/env python3
-
 import numpy as np
-np_shape = __import__('10-ill_use_my_scale').np_shape
+import matplotlib.pyplot as plt
 
-mat1 = np.array([1, 2, 3, 4, 5, 6])
-mat2 = np.array([])
-mat3 = np.array([[[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]],
-                 [[11, 12, 13, 14, 15], [16, 17, 18, 19, 20]]])
-print(np_shape(mat1))
-print(np_shape(mat2))
-print(np_shape(mat3))
-alexa@ubuntu-xenial:0x00-linear_algebra$ ./10-main.py
-(6,)
-(0,)
-(2, 2, 5)
-alexa@ubuntu-xenial:0x00-linear_algebra$
+x = np.arange(0, 28651, 5730)
+r = np.log(0.5)
+t = 5730
+y = np.exp((r / t) * x)
+
+# your code here
 ```
 
-### 11. The Western Exchange
+![alt plot](./graphs/3.png)
 
-**[11-the_western_exchange.py](11-the_western_exchange.py)**
+### 3. Two is better than one
 
-Write a function `def np_transpose(matrix):` that transposes `matrix`:
+**[3-two.py](3-two.py)**
 
-- You can assume that `matrix` can be interpreted as a `numpy.ndarray`
-- You are not allowed to use any loops or conditional statements
-- You must return a new `numpy.ndarray`
+Complete the following source code to plot `x ↦ y1` and `x ↦ y2` as line graphs:
+
+- The x-axis should be labeled `Time (years)`
+- The y-axis should be labeled `Fraction Remaining`
+- The title should be `Exponential Decay of Radioactive Elements`
+- The x-axis should range from 0 to 20,000
+- The y-axis should range from 0 to 1
+- `x ↦ y1` should be plotted with a dashed red line
+- `x ↦ y2` should be plotted with a solid green line
+- A legend labeling `x ↦ y1` as `C-14` and `x ↦ y2` as `Ra-226` should be placed in the upper right hand corner of the plot
 
 ```
-alexa@ubuntu-xenial:0x00-linear_algebra$ cat 11-main.py
 #!/usr/bin/env python3
-
 import numpy as np
-np_transpose = __import__('11-the_western_exchange').np_transpose
+import matplotlib.pyplot as plt
 
-mat1 = np.array([1, 2, 3, 4, 5, 6])
-mat2 = np.array([])
-mat3 = np.array([[[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]],
-                 [[11, 12, 13, 14, 15], [16, 17, 18, 19, 20]]])
-print(np_transpose(mat1))
-print(mat1)
-print(np_transpose(mat2))
-print(mat2)
-print(np_transpose(mat3))
-print(mat3)
-alexa@ubuntu-xenial:0x00-linear_algebra$ ./11-main.py
-[1 2 3 4 5 6]
-[1 2 3 4 5 6]
-[]
-[]
-[[[ 1 11]
-  [ 6 16]]
+x = np.arange(0, 21000, 1000)
+r = np.log(0.5)
+t1 = 5730
+t2 = 1600
+y1 = np.exp((r / t1) * x)
+y2 = np.exp((r / t2) * x)
 
- [[ 2 12]
-  [ 7 17]]
-
- [[ 3 13]
-  [ 8 18]]
-
- [[ 4 14]
-  [ 9 19]]
-
- [[ 5 15]
-  [10 20]]]
-[[[ 1  2  3  4  5]
-  [ 6  7  8  9 10]]
-
- [[11 12 13 14 15]
-  [16 17 18 19 20]]]
-alexa@ubuntu-xenial:0x00-linear_algebra$
+# your code here
 ```
 
-### 12. Bracing The Elements
+![alt plot](./graphs/4.png)
 
-**[12-bracin_the_elements.py](12-bracin_the_elements.py)**
+### 4. Frequency
 
-Write a function `def np_elementwise(mat1, mat2):` that performs element-wise addition, subtraction, multiplication, and division:
+**[4-frequency.py](4-frequency.py)**
 
-- You can assume that `mat1` and `mat2` can be interpreted as `numpy.ndarrays`
-- You should return a tuple containing the element-wise sum, difference, product, and quotient, respectively
-- You are not allowed to use any loops or conditional statements
-- You can assume that `mat1` and `mat2` are never empty
+Complete the following source code to plot a histogram of student scores for a project:
+
+- The x-axis should be labeled `Grades`
+- The y-axis should be labeled `Number of Students`
+- The x-axis should have bins every 10 units
+- The title should be `Project A`
+- The bars should be outlined in black
 
 ```
-alexa@ubuntu-xenial:0x00-linear_algebra$ cat 12-main.py
 #!/usr/bin/env python3
-
 import numpy as np
-np_elementwise = __import__('12-bracin_the_elements').np_elementwise
+import matplotlib.pyplot as plt
 
-mat1 = np.array([[11, 22, 33], [44, 55, 66]])
-mat2 = np.array([[1, 2, 3], [4, 5, 6]])
+np.random.seed(5)
+student_grades = np.random.normal(68, 15, 50)
 
-print(mat1)
-print(mat2)
-add, sub, mul, div = np_elementwise(mat1, mat2)
-print("Add:\n", add, "\nSub:\n", sub, "\nMul:\n", mul, "\nDiv:\n", div)
-add, sub, mul, div = np_elementwise(mat1, 2)
-print("Add:\n", add, "\nSub:\n", sub, "\nMul:\n", mul, "\nDiv:\n", div)
-alexa@ubuntu-xenial:0x00-linear_algebra$ ./12-main.py
-[[11 22 33]
- [44 55 66]]
-[[1 2 3]
- [4 5 6]]
-Add:
- [[12 24 36]
- [48 60 72]]
-Sub:
- [[10 20 30]
- [40 50 60]]
-Mul:
- [[ 11  44  99]
- [176 275 396]]
-Div:
- [[11. 11. 11.]
- [11. 11. 11.]]
-Add:
- [[13 24 35]
- [46 57 68]]
-Sub:
- [[ 9 20 31]
- [42 53 64]]
-Mul:
- [[ 22  44  66]
- [ 88 110 132]]
-Div:
- [[ 5.5 11.  16.5]
- [22.  27.5 33. ]]
-alexa@ubuntu-xenial:0x00-linear_algebra$
+# your code here
 ```
 
-### 13. Cat's Got Your Tongue
+![alt plot](./graphs/5.png)
 
-**[13-cats_got_your_tongue.py](13-cats_got_your_tongue.py)**
+### 5. All in One
 
-Write a function `def np_cat(mat1, mat2, axis=0)` that concatenates two matrices along a specific axis:
+**[5-all_in_one.py](5-all_in_one.py)**
 
-- You can assume that `mat1` and [mat2] can be interpreted as `numpy.ndarrays`
-- You must return a new `numpy.ndarray`
-- You are not allowed to use any loops or conditional statements
-- You may use: `import numpy as np`
-- You can assume that `mat1` and `mat2` are never empty
+Complete the following source code to plot all 5 previous graphs in one figure:
+
+- All axis labels and plot titles should have a font size of `x-small` (to fit nicely in one figure)
+- The plots should make a 3 x 2 grid
+- The last plot should take up two column widths (see below)
+- The title of the figure should be `All in One`
 
 ```
-alexa@ubuntu-xenial:0x00-linear_algebra$ cat 13-main.py
 #!/usr/bin/env python3
-
 import numpy as np
-np_cat = __import__('13-cats_got_your_tongue').np_cat
+import matplotlib.pyplot as plt
 
-mat1 = np.array([[11, 22, 33], [44, 55, 66]])
-mat2 = np.array([[1, 2, 3], [4, 5, 6]])
-mat3 = np.array([[7], [8]])
-print(np_cat(mat1, mat2))
-print(np_cat(mat1, mat2, axis=1))
-print(np_cat(mat1, mat3, axis=1))
-alexa@ubuntu-xenial:0x00-linear_algebra$ ./13-main.py
-[[11 22 33]
- [44 55 66]
- [ 1  2  3]
- [ 4  5  6]]
-[[11 22 33  1  2  3]
- [44 55 66  4  5  6]]
-[[11 22 33  7]
- [44 55 66  8]]
-alexa@ubuntu-xenial:0x00-linear_algebra$
+y0 = np.arange(0, 11) ** 3
+
+mean = [69, 0]
+cov = [[15, 8], [8, 15]]
+np.random.seed(5)
+x1, y1 = np.random.multivariate_normal(mean, cov, 2000).T
+y1 += 180
+
+x2 = np.arange(0, 28651, 5730)
+r2 = np.log(0.5)
+t2 = 5730
+y2 = np.exp((r2 / t2) * x2)
+
+x3 = np.arange(0, 21000, 1000)
+r3 = np.log(0.5)
+t31 = 5730
+t32 = 1600
+y31 = np.exp((r3 / t31) * x3)
+y32 = np.exp((r3 / t32) * x3)
+
+np.random.seed(5)
+student_grades = np.random.normal(68, 15, 50)
+
+# your code here
 ```
 
-### 14. Saddle Up
+![alt plot](./graphs/6.png)
 
-**[14-saddle_up.py](14-saddle_up.py)**
+### 6. Stacking Bars
 
-Write a function `def np_matmul(mat1, mat2):` that performs matrix multiplication:
+**[6-bars.py](6-bars.py)**
 
-- You can assume that `mat1` and `mat2` are `numpy.ndarrays`
-- You are not allowed to use any loops or conditional statements
-- You may use: `import numpy as np`
-- You can assume that `mat1` and `mat2` are never empty
+Complete the following source code to plot a stacked bar graph:
+
+- `fruit` is a matrix representing the number of fruit various people possess
+  - The columns of `fruit` represent the number of fruit `Farrah`, `Fred`, and `Felicia` have, respectively
+  - The rows of `fruit` represent the number of `apples`, `bananas`, `oranges`, and `peaches`, respectively
+- The bars should represent the number of fruit each person possesses:
+  - The bars should be grouped by person, i.e, the horizontal axis should have one labeled tick per person
+  - Each fruit should be represented by a specific color:
+    - `apples` = red
+    - `bananas` = yellow
+    - `oranges` = orange (`#ff8000`)
+    - `peaches` = peach (`#ffe5b4`)
+    - A legend should be used to indicate which fruit is represented by each color
+  - The bars should be stacked in the same order as the rows of `fruit`, from bottom to top
+  - The bars should have a width of `0.5`
+- The y-axis should be labeled `Quantity of Fruit`
+- The y-axis should range from 0 to 80 with ticks every 10 units
+- The title should be `Number of Fruit per Person`
 
 ```
-alexa@ubuntu-xenial:0x00-linear_algebra$ cat 14-main.py
 #!/usr/bin/env python3
-
 import numpy as np
-np_matmul = __import__('14-saddle_up').np_matmul
+import matplotlib.pyplot as plt
 
-mat1 = np.array([[11, 22, 33], [44, 55, 66]])
-mat2 = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
-mat3 = np.array([[7], [8], [9]])
-print(np_matmul(mat1, mat2))
-print(np_matmul(mat1, mat3))
-alexa@ubuntu-xenial:0x00-linear_algebra$ ./14-main.py
-[[ 330  396  462]
- [ 726  891 1056]]
-[[ 550]
- [1342]]
-alexa@ubuntu-xenial:0x00-linear_algebra$
+np.random.seed(5)
+fruit = np.random.randint(0, 20, (4,3))
+
+# your code here
 ```
 
-### 15. Slice Like A Ninja
+![alt plot](./graphs/7.png)
 
-**[100-slice_like_a_ninja.py](100-slice_like_a_ninja.py)**
+### 7. Gradient
 
-Write a function `def np_slice(matrix, axes={}):` that slices a matrix along specific axes:
+**[100-gradient.py](100-gradient.py)**
 
-- You can assume that `matrix` is a `numpy.ndarray`
-- You must return a new `numpy.ndarray`
-- `axes` is a dictionary where the `key` is an axis to slice along and the `value` is a tuple representing the slice to make along that axis
-- You can assume that axes represents a valid slice
-- [Hint](https://docs.python.org/3/library/functions.html#slice)
+Complete the following source code to create a scatter plot of sampled elevations on a mountain:
+
+- The x-axis should be labeled `x coordinate (m)`
+- The y-axis should be labeled `y coordinate (m)`
+- The title should be `Mountain Elevation`
+- A colorbar should be used to display elevation
+- The colorbar should be labeled `elevation (m)`
 
 ```
-alexa@ubuntu-xenial:0x00-linear_algebra$ cat 100-main.py
 #!/usr/bin/env python3
-
 import numpy as np
-np_slice = __import__('100-slice_like_a_ninja').np_slice
+import matplotlib.pyplot as plt
 
-mat1 = np.array([[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]])
-print(np_slice(mat1, axes={1: (1, 3)}))
-print(mat1)
-mat2 = np.array([[[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]],
-                 [[11, 12, 13, 14, 15], [16, 17, 18, 19, 20]],
-                 [[21, 22, 23, 24, 25], [26, 27, 28, 29, 30]]])
-print(np_slice(mat2, axes={0: (2,), 2: (None, None, -2)}))
-print(mat2)
-alexa@ubuntu-xenial:0x00-linear_algebra$ ./100-main.py
-[[2 3]
- [7 8]]
-[[ 1  2  3  4  5]
- [ 6  7  8  9 10]]
-[[[ 5  3  1]
-  [10  8  6]]
+np.random.seed(5)
 
- [[15 13 11]
-  [20 18 16]]]
-[[[ 1  2  3  4  5]
-  [ 6  7  8  9 10]]
+x = np.random.randn(2000) * 10
+y = np.random.randn(2000) * 10
+z = np.random.rand(2000) + 40 - np.sqrt(np.square(x) + np.square(y))
 
- [[11 12 13 14 15]
-  [16 17 18 19 20]]
-
- [[21 22 23 24 25]
-  [26 27 28 29 30]]]
-alexa@ubuntu-xenial:0x00-linear_algebra$
+# your code here8.png
 ```
 
-### 16. The Whole Barn
+![alt plot](./graphs/8.png)
 
-**[101-the_whole_barn.py](101-the_whole_barn.py)**
+### 8. PCA
 
-Write a function `def add_matrices(mat1, mat2):` that adds two matrices:
+**[101-pca.py](101-pca.py9.png)**
 
-- You can assume that `mat1` and `mat2` are matrices containing ints/floats
-- You can assume all elements in the same dimension are of the same type/shape
-- You must return a new matrix
-- If matrices are not the same shape, return `None`
-- You can assume that `mat1` and `mat2` will never be empty
+Principle Component Analysis (PCA) is a vital procedure used in data science for reducing the dimensionality of data (in turn, decreasing computation cost). It is also largely used for visualizing high dimensional data in 2 or 3 dimensions. For this task, you will be visualizing the [Iris flower data set](https://en.wikipedia.org/wiki/Iris_flower_data_set) . You will need to download the file [pca.npz](https://holbertonintranet.s3.amazonaws.com/uploads/misc/2020/1/cdec57e313874348ba9a.npz?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUWMNL5ANN%2F20210721%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210721T014923Z&X-Amz-Expires=345600&X-Amz-SignedHeaders=host&X-Amz-Signature=b1ed805647db921d6d98afbfc594cf87be88b96b936e466ca5a390b5f8b2573b) to test your code. You do not need to push this dataset to github. Complete the following source code to visualize the data in 3D:
 
 ```
-alexa@ubuntu-xenial:0x00-linear_algebra$ cat 101-main.py
 #!/usr/bin/env python3
-
-add_matrices = __import__('101-the_whole_barn').add_matrices
-
-mat1 = [1, 2, 3]
-mat2 = [4, 5, 6]
-print(add_matrices(mat1, mat2))
-mat1 = [[1, 2], [3, 4]]
-mat2 = [[5, 6], [7, 8]]
-print(add_matrices(mat1, mat2))
-mat1 = [[[[1, 2, 3, 4], [5, 6, 7, 8]],
-         [[9, 10, 11, 12], [13, 14 ,15, 16]],
-         [[17, 18, 19, 20], [21, 22, 23, 24]]],
-        [[[25, 26, 27, 28], [29, 30, 31, 32]],
-         [[33, 34, 35, 36], [37, 38, 39, 40]],
-         [[41, 42, 43, 44], [45, 46, 47, 48]]]]
-mat2 = [[[[11, 12, 13, 14], [15, 16, 17, 18]],
-         [[19, 110, 111, 112], [113, 114 ,115, 116]],
-         [[117, 118, 119, 120], [121, 122, 123, 124]]],
-        [[[125, 126, 127, 128], [129, 130, 131, 132]],
-         [[133, 134, 135, 136], [137, 138, 139, 140]],
-         [[141, 142, 143, 144], [145, 146, 147, 148]]]]
-mat3 = [[[[11, 12, 13, 14], [15, 16, 17, 18]],
-         [[117, 118, 119, 120], [121, 122, 123, 124]]],
-        [[[125, 126, 127, 128], [129, 130, 131, 132]],
-         [[141, 142, 143, 144], [145, 146, 147, 148]]]]
-print(add_matrices(mat1, mat2))
-print(add_matrices(mat1, mat3))
-alexa@ubuntu-xenial:0x00-linear_algebra$ ./101-main.py
-[5, 7, 9]
-[[6, 8], [10, 12]]
-[[[[12, 14, 16, 18], [20, 22, 24, 26]], [[28, 120, 122, 124], [126, 128, 130, 132]], [[134, 136, 138, 140], [142, 144, 146, 148]]], [[[150, 152, 154, 156], [158, 160, 162, 164]], [[166, 168, 170, 172], [174, 176, 178, 180]], [[182, 184, 186, 188], [190, 192, 194, 196]]]]
-None
-alexa@ubuntu-xenial:0x00-linear_algebra$
-```
-
-### 17. Squashed Like Sardines
-
-**[102-squashed_like_sardines.py](102-squashed_like_sardines.py)**
-
-Write a function `def cat_matrices(mat1, mat2, axis=0):` that concatenates two matrices along a specific axis:
-
-- You can assume that `mat1` and `mat2` are matrices containing ints/floats
-- You can assume all elements in the same dimension are of the same type/shape
-- You must return a new matrix
-- If you cannot concatenate the matrices, return `None`
-- You can assume that `mat1` and `mat2` are never empty
-
-_Note the time difference between the standard Python3 library and the numpy library is an order of magnitude! When you have matrices with millions of data points, this time adds up!_
-
-```
-alexa@ubuntu-xenial:0x00-linear_algebra$ cat 102-main.py
-#!/usr/bin/env python3
-
+from mpl_toolkits.mplot3d import Axes3D
+import matplotlib.pyplot as plt
 import numpy as np
-import time
-cat_matrices = __import__('102-squashed_like_sardines').cat_matrices
 
-mat1 = [1, 2, 3]
-mat2 = [4, 5, 6]
-np_mat1 = np.array(mat1)
-np_mat2 = np.array(mat2)
+lib = np.load("pca.npz")
+data = lib["data"]
+labels = lib["labels"]
 
-t0 = time.time()
-m = cat_matrices(mat1, mat2)
-t1 = time.time()
-print(t1 - t0)
-print(m)
-t0 = time.time()
-np.concatenate((np_mat1, np_mat2))
-t1 = time.time()
-print(t1 - t0, "\n")
+data_means = np.mean(data, axis=0)
+norm_data = data - data_means
+_, _, Vh = np.linalg.svd(norm_data)
+pca_data = np.matmul(norm_data, Vh[:3].T)
 
-mat1 = [[1, 2], [3, 4]]
-mat2 = [[5, 6], [7, 8]]
-np_mat1 = np.array(mat1)
-np_mat2 = np.array(mat2)
-
-t0 = time.time()
-m = cat_matrices(mat1, mat2)
-t1 = time.time()
-print(t1 - t0)
-print(m)
-t0 = time.time()
-np.concatenate((np_mat1, np_mat2))
-t1 = time.time()
-print(t1 - t0, "\n")
-
-t0 = time.time()
-m = cat_matrices(mat1, mat2, axis=1)
-t1 = time.time()
-print(t1 - t0)
-print(m)
-t0 = time.time()
-np.concatenate((mat1, mat2), axis=1)
-t1 = time.time()
-print(t1 - t0, "\n")
-
-mat3 = [[[[1, 2, 3, 4], [5, 6, 7, 8]],
-         [[9, 10, 11, 12], [13, 14 ,15, 16]],
-         [[17, 18, 19, 20], [21, 22, 23, 24]]],
-        [[[25, 26, 27, 28], [29, 30, 31, 32]],
-         [[33, 34, 35, 36], [37, 38, 39, 40]],
-         [[41, 42, 43, 44], [45, 46, 47, 48]]]]
-mat4 = [[[[11, 12, 13, 14], [15, 16, 17, 18]],
-         [[19, 110, 111, 112], [113, 114 ,115, 116]],
-         [[117, 118, 119, 120], [121, 122, 123, 124]]],
-        [[[125, 126, 127, 128], [129, 130, 131, 132]],
-         [[133, 134, 135, 136], [137, 138, 139, 140]],
-         [[141, 142, 143, 144], [145, 146, 147, 148]]]]
-mat5 = [[[[11, 12, 13, 14], [15, 16, 17, 18]],
-         [[117, 118, 119, 120], [121, 122, 123, 124]]],
-        [[[125, 126, 127, 128], [129, 130, 131, 132]],
-         [[141, 142, 143, 144], [145, 146, 147, 148]]]]
-np_mat3 = np.array(mat3)
-np_mat4 = np.array(mat4)
-np_mat5 = np.array(mat5)
-
-t0 = time.time()
-m = cat_matrices(mat3, mat4, axis=3)
-t1 = time.time()
-print(t1 - t0)
-print(m)
-t0 = time.time()
-np.concatenate((np_mat3, np_mat4), axis=3)
-t1 = time.time()
-print(t1 - t0, "\n")
-
-t0 = time.time()
-m = cat_matrices(mat3, mat5, axis=1)
-t1 = time.time()
-print(t1 - t0)
-print(m)
-t0 = time.time()
-np.concatenate((np_mat3, np_mat5), axis=1)
-t1 = time.time()
-print(t1 - t0, "\n")
-
-m = cat_matrices(mat2, mat5)
-print(m)
-alexa@ubuntu-xenial:0x00-linear_algebra$ ./102-main.py
-1.6927719116210938e-05
-[1, 2, 3, 4, 5, 6]
-4.76837158203125e-06
-
-1.8358230590820312e-05
-[[1, 2], [3, 4], [5, 6], [7, 8]]
-3.0994415283203125e-06
-
-1.7881393432617188e-05
-[[1, 2, 5, 6], [3, 4, 7, 8]]
-6.9141387939453125e-06
-
-0.00016427040100097656
-[[[[1, 2, 3, 4, 11, 12, 13, 14], [5, 6, 7, 8, 15, 16, 17, 18]], [[9, 10, 11, 12, 19, 110, 111, 112], [13, 14, 15, 16, 113, 114, 115, 116]], [[17, 18, 19, 20, 117, 118, 119, 120], [21, 22, 23, 24, 121, 122, 123, 124]]], [[[25, 26, 27, 28, 125, 126, 127, 128], [29, 30, 31, 32, 129, 130, 131, 132]], [[33, 34, 35, 36, 133, 134, 135, 136], [37, 38, 39, 40, 137, 138, 139, 140]], [[41, 42, 43, 44, 141, 142, 143, 144], [45, 46, 47, 48, 145, 146, 147, 148]]]]
-5.030632019042969e-05
-
-0.00020313262939453125
-[[[[1, 2, 3, 4], [5, 6, 7, 8]], [[9, 10, 11, 12], [13, 14, 15, 16]], [[17, 18, 19, 20], [21, 22, 23, 24]], [[11, 12, 13, 14], [15, 16, 17, 18]], [[117, 118, 119, 120], [121, 122, 123, 124]]], [[[25, 26, 27, 28], [29, 30, 31, 32]], [[33, 34, 35, 36], [37, 38, 39, 40]], [[41, 42, 43, 44], [45, 46, 47, 48]], [[125, 126, 127, 128], [129, 130, 131, 132]], [[141, 142, 143, 144], [145, 146, 147, 148]]]]
-1.5735626220703125e-05
-
-None
-alexa@ubuntu-xenial:0x00-linear_algebra$
+# your code here
 ```
+
+- The title of the plot should be `PCA of Iris Dataset`
+- `data` is a `np.ndarray` of shape `(150, 4)`
+  - `150` => the number of flowers
+  - `4` => petal length, petal width, sepal length, sepal width
+- `labels` is a `np.ndarray` of shape `(150,)` containing information about what species of iris each data point represents:
+  - `0` => Iris Setosa
+  - `1` => Iris Versicolor
+  - `2` => Iris Virginica
+- `pca_data` is a `np.ndarray` of shape `(150, 3)`
+  - The columns of `pca_data` represent the 3 dimensions of the reduced data, i.e., x, y, and z, respectively
+- The x, y, and z axes should be labeled `U1`, `U2`, and `U3`, respectively
+- The data points should be colored based on their labels using the `plasma` color map
+
+![alt plot](./graphs/9.png)
