@@ -21,14 +21,10 @@ def poly_derivative(poly):
         derivative [list]: coefficients representing
                            the derivative of the polynomial
     """
-    check = all([type(coefficient) is int
-                 for coefficient in poly])
-    if type(poly) is not list or check is False:
+    if type(poly) is not list or len(poly) == 0:
         return
-    if len(poly) == 1:
+    derivative = [coefficient * exp
+                  for exp, coefficient in enumerate(poly)]
+    if derivative[1:] == []:
         return [0]
-    derivative = [poly[coefficient] * coefficient
-                  for coefficient in range(1, len(poly))]
-    if sum(derivative) == 0:
-        return [0]
-    return derivative
+    return derivative[1:]
