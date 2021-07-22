@@ -23,9 +23,7 @@ def poly_derivative(poly):
     """
     check = all([type(coefficient) is int
                  for coefficient in poly])
-    if type(poly) is not list\
-            or len(poly) == 0\
-            or check is False:
+    if type(poly) is not list or check is False:
         return
     if len(poly) == 1:
         return [0]
