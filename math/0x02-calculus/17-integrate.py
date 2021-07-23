@@ -22,11 +22,27 @@ def poly_integral(poly, C=0):
         integral [list]: coefficients representing
                          the integral of the polynomial
     """
-    if not_list(poly) or is_empty(poly) or C < 0:
+    if not_list(poly) or is_empty(poly) or is_negative(poly) or C < 0:
         return
     integral = [div(coefficient, i + 1) for i, coefficient in enumerate(poly)]
 
     return [C] + integral
+
+
+def is_negative(poly):
+    """checks if poly has negative values
+
+    Args:
+        poly (list): coefficients representing a polynomial
+
+    Returns:
+        bool: True/False
+    """
+    values = [i >= 0 for i in poly]
+    if False in values:
+        return True
+    else:
+        return False
 
 
 def is_empty(poly):
