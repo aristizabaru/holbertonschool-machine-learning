@@ -22,11 +22,35 @@ def poly_integral(poly, C=0):
         integral [list]: coefficients representing
                          the integral of the polynomial
     """
-    if type(poly) is not list or len(poly) == 0:
+    if not_list(poly) or is_empty(poly) or C < 0:
         return
     integral = [div(coefficient, i + 1) for i, coefficient in enumerate(poly)]
 
     return [C] + integral
+
+
+def is_empty(poly):
+    """check if list is empty
+
+    Args:
+        poly (list): coefficients representing a polynomial
+
+    Returns:
+        bool: True/False
+    """
+    return len(poly) == 0
+
+
+def not_list(poly):
+    """check if list is type list
+
+    Args:
+        poly (list): coefficients representing a polynomial
+
+    Returns:
+        bool: True/False
+    """
+    return type(poly) is not list
 
 
 def div(x, y):
