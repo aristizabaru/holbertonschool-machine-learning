@@ -22,8 +22,10 @@ def poly_integral(poly, C=0):
         integral [list]: coefficients representing
                          the integral of the polynomial
     """
-    if not_list(poly) or is_empty(poly) or not_number(poly) or not isinstance(C, int):
+    if not_list(poly) or is_empty(poly) or not_number(poly) or C < 0:
         return
+    if poly == [0]:
+        return [C]
     integral = [div(coefficient, i + 1) for i, coefficient in enumerate(poly)]
 
     return [C] + integral
