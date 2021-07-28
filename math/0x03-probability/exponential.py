@@ -46,3 +46,13 @@ class Exponential:
             return 0
         # Fᵪ(x) = λe^-λx
         return λ * e ** (-λ * x)
+
+    def cdf(self, x):
+        """docstring"""
+        e = 2.7182818285  # Euler's number
+        λ = self.lambtha
+
+        if x < 0:
+            return 0
+        # Fᵪ(x) = Σ 1 - e^-λx
+        return sum([1 - e ** (-λ * i) for i in range(x + 1)])
