@@ -113,5 +113,5 @@ class Poisson:
 
         if x < 0:
             return 0
-        # Σ pmf(i) from i=0 to x
+        # F(x) = Σ pmf(i) from i=0 to x
         return sum([self.pmf(i) for i in range(x + 1)])
