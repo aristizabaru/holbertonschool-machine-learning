@@ -51,14 +51,14 @@ class Poisson:
         if data is None:
             self.lambtha = float(lambtha)
             if lambtha <= 0:
-                raise ValueError("lambtha must be a positive value")
+                raise ValueError('lambtha must be a positive value')
         else:
-            # λ = Σ xᵢ / N
-            self.lambtha = float(sum(data) / len(data))
             if not isinstance(data, list):
                 raise TypeError('data must be a list')
             if len(data) < 2:
-                raise ValueError("data must contain multiple values")
+                raise ValueError('data must contain multiple values')
+            # λ = Σ xᵢ / N
+            self.lambtha = float(sum(data) / len(data))
 
     @staticmethod
     def factorial(num):
