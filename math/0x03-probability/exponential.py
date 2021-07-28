@@ -45,4 +45,4 @@ class Exponential:
         if x < 0:
             return 0
         # Fᵪ(x) = λe^-λx
-        return λ * e ** -λ * x
+        return λ * e ** (-λ * x)
