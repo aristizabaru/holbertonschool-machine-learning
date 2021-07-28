@@ -3,13 +3,41 @@
 
 
 class Exponential:
-    """Time til next event
+    """Represents an Exponential distribution
+
+    Def. One of the widely used continuous distributions.
+    It is often used to model the time elapsed between events
+
+    Probability Mass Function (PMF):
+        This function gives the probability of the next
+        event to happend before given value 'x'
+
+        Formula → f(x) = λe^-λx
+        x → value of the event
+        λ → avarage of events in a interval.
+            Must always be positive
+        e → 2.7182818285 (Euler's number)
+
+        formula mean  λ = 1 / (Σ xᵢ / N)
+
+    Cumulative Distribution Function (CDF):
+        This functions gives the probability from a variable
+        to be less or equal than a given value
+
+        General Formula → F(x) = P(X ≤ x)
+
+        Probability Distribution Formula:
+        F(x) = 1 - e^-λx
+        x → value of the event
+        λ → avarage of events in a interval.
+            Must always be positive
+        e → 2.7182818285 (Euler's number)
 
         formula mean  λ = 1 / (Σ xᵢ / N)
     """
 
     def __init__(self, data=None, lambtha=1.):
-        """Init Poisson instance with a lambtha
+        """Init Exponential instance with a lambtha
         public attribute
 
         Expl:
@@ -38,7 +66,25 @@ class Exponential:
             self.lambtha = float(1 / (sum(data) / len(data)))
 
     def pdf(self, x):
-        """docstring"""
+        """Probability Mass Function (PMF):
+        This function gives the probability of the next
+        event to happend before given value 'x'
+
+        Formula → f(x) = λe^-λx
+        x → value of the event
+        λ → avarage of events in a interval.
+            Must always be positive
+        e → 2.7182818285 (Euler's number)
+
+        formula mean  λ = 1 / (Σ xᵢ / N)
+
+        Args:
+            x (int/float): value of the event
+
+        Returns:
+            int/float: probability of an event to happen
+                       before 'x'
+        """
         e = 2.7182818285  # Euler's number
         λ = self.lambtha
 
@@ -48,7 +94,27 @@ class Exponential:
         return λ * e ** (-λ * x)
 
     def cdf(self, x):
-        """docstring"""
+        """Cumulative Distribution Function (CDF):
+        This functions gives the probability from a variable
+        to be less or equal than a given value
+
+        General Formula → F(x) = P(X ≤ x)
+
+        Probability Distribution Formula:
+        F(x) = 1 - e^-λx
+        x → value of the event
+        λ → avarage of events in a interval.
+            Must always be positive
+        e → 2.7182818285 (Euler's number)
+
+        formula mean  λ = 1 / (Σ xᵢ / N)
+
+        Args:
+            x (int/float): value of the event
+
+        Returns:
+            int/float: cumulative probability'
+        """
         e = 2.7182818285  # Euler's number
         λ = self.lambtha
 
