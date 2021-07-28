@@ -55,4 +55,4 @@ class Exponential:
         if x < 0:
             return 0
         # F(x) = Σ 1 - e^-λx
-        return sum([1 - e ** -(λ * i) for i in range(x + 1)])
+        return 1 - e ** -λ * x
