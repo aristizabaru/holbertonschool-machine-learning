@@ -4,6 +4,8 @@
 
 class Exponential:
     """Time til next event
+
+        formula 1 λ = 1 / (Σ xᵢ / N)
     """
 
     def __init__(self, data=None, lambtha=1.):
@@ -14,7 +16,7 @@ class Exponential:
             lambtha is the expected number of events
             in a interval (mean). λ has to be always > 0
 
-            Formula → λ = Σ xᵢ / N
+            Formula → λ = 1 / (Σ xᵢ / N)
             Σ xᵢ → Sum of events in a interval
             N → # of events in a interval
 
@@ -32,5 +34,5 @@ class Exponential:
                 raise TypeError('data must be a list')
             if len(data) < 2:
                 raise ValueError('data must contain multiple values')
-            # λ = Σ xᵢ / N
-            self.lambtha = float(sum(data) / len(data))
+            # λ = 1 / (Σ xᵢ / N)
+            self.lambtha = float(1 / (sum(data) / len(data)))
