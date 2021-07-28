@@ -44,7 +44,7 @@ class Exponential:
 
         if x < 0:
             return 0
-        # Fᵪ(x) = λe^-λx
+        # f(x) = λe^-λx
         return λ * e ** (-λ * x)
 
     def cdf(self, x):
@@ -54,5 +54,5 @@ class Exponential:
 
         if x < 0:
             return 0
-        # Fᵪ(x) = Σ 1 - e^-λx
-        return sum([1 - e ** (-λ * i) for i in range(x + 1)])
+        # F(x) = Σ 1 - e^-λx
+        return sum([1 - e ** -(λ * i) for i in range(x + 1)])
