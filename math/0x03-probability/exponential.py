@@ -39,7 +39,6 @@ class Exponential:
 
     def pdf(self, x):
         """docstring"""
-        x = int(x)
         e = 2.7182818285  # Euler's number
         λ = self.lambtha
 
