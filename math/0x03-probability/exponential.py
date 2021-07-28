@@ -5,7 +5,7 @@
 class Exponential:
     """Time til next event
 
-        formula 1 λ = 1 / (Σ xᵢ / N)
+        formula mean  λ = 1 / (Σ xᵢ / N)
     """
 
     def __init__(self, data=None, lambtha=1.):
@@ -36,3 +36,14 @@ class Exponential:
                 raise ValueError('data must contain multiple values')
             # λ = 1 / (Σ xᵢ / N)
             self.lambtha = float(1 / (sum(data) / len(data)))
+
+    def pdf(self, x):
+        """docstring"""
+        x = int(x)
+        e = 2.7182818285  # Euler's number
+        λ = self.lambtha
+
+        if x < 0:
+            return 0
+        # Fᵪ(x) = λe^-λx
+        return λ * e ** -λ * x
