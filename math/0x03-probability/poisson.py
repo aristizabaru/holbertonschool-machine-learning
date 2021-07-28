@@ -20,7 +20,7 @@ class Poisson:
             Must always be positive
         e → 2.7182818285 (Euler's number)
 
-    Cumulative Distribution Function (CDF)
+    Cumulative Distribution Function (CDF):
         This functions gives the probability from a variable
         to be less or equal than a given value
 
