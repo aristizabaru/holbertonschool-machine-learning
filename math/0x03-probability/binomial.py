@@ -42,6 +42,15 @@ class Binomial:
         return (n_fac / (k_fac * Binomial.factorial(self.n - k))) \
             * (self.p ** k) * ((1 - self.p) ** (self.n - k))
 
+    def cdf(self, k):
+        """docstring"""
+        k = int(k)
+
+        if k < 0:
+            return 0
+
+        return sum([self.pmf(i) for i in range(k + 1)])
+
     @staticmethod
     def factorial(num):
         """Computes a factorial number recursively
