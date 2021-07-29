@@ -29,3 +29,27 @@ class Binomial:
             self.p = 1 - (variance / μ)
             self.n = int(round(μ / self.p))
             self.p = float(μ / self.n)
+
+    def pmf(self, k):
+        """docstring"""
+        k = int(k)
+
+        if k < 0:
+            return 0
+        n_fac = Binomial.factorial(self.n)
+        k_fac = Binomial.factorial(k)
+        # (n! / (k! * (n - k)!)) * p^x * q^n-x
+        return (n_fac / (k_fac * Binomial.factorial(self.n - k))) \
+            * (self.p ** k) * ((1 - self.p) ** (self.n - k))
+
+    @staticmethod
+    def factorial(num):
+        """Computes a factorial number recursively
+
+        Args:
+            num (int): factorial number
+
+        Returns:
+            int: computed factorial number
+        """
+        return num * Binomial.factorial(num - 1) if num > 1 else 1
