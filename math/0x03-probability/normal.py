@@ -53,5 +53,8 @@ class Normal:
         μ = self.mean
         σ = self.stddev
         variance = σ ** 2
+
         # f(x) = e^−((x−μ)² / (2σ²)) / σ√2π
-        return (e ** (-((x - μ) ** 2) / (2 * variance))) / (σ * ((2 * π) ** (1/2)))
+        exp = -((x - μ) ** 2) / (2 * variance)
+        divisor = σ * ((2 * π) ** (1/2))
+        return (e ** exp) / divisor
