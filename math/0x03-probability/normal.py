@@ -29,12 +29,29 @@ class Normal:
 
     def z_score(self, x):
         """docstring - Estandarización de
-        variables aleatorias normales"""
+        variables aleatorias normales
+
+        Return the desviación normalizada
+        para validar tabla estandarizada
+        """
         # Z = (x - μ) / σ
         return (x - self.mean) / self.stddev
 
     def x_value(self, z):
         """docstring - Estandarización de
-        variables aleatorias normales"""
+        variables aleatorias normales
+
+        Return desviación normal tipificada
+        """
         # X = σz + μ
         return (self.stddev * z) + self.mean
+
+    def pdf(self, x):
+        """docstring"""
+        e = 2.7182818285  # Euler's number
+        π = 3.1415926535
+        μ = self.mean
+        σ = self.stddev
+        variance = σ ** 2
+        # f(x) = e^−((x−μ)² / (2σ²)) / σ√2π
+        return (e ** (-((x - μ) ** 2) / (2 * variance))) / (σ * ((2 * π) ** (1/2)))
