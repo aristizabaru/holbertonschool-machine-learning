@@ -41,7 +41,7 @@ class Normal:
         """docstring - Estandarización de
         variables aleatorias normales
 
-        Return desviación normal tipificada
+        Return desviación normal tiπficada
         """
         # X = σz + μ
         return (self.stddev * z) + self.mean
@@ -58,3 +58,20 @@ class Normal:
         exp = -((x - μ) ** 2) / (2 * variance)
         divisor = σ * ((2 * π) ** (1/2))
         return (e ** exp) / divisor
+
+    def cdf(self, x):
+        """docstring"""
+        μ = self.mean
+        σ = self.stddev
+
+        dividend = x - μ
+        divisor = σ ** (1/2)
+        erf = Normal.erf(divisor / dividend)
+        return (1/2) * (1 + erf)
+
+    @staticmethod
+    def erf(x):
+        """docstring"""
+        π = 3.1415926535
+        return (2 / (π ** 0.5)) * (x - ((x ** 3) / 3) + ((x ** 5) / 10) -
+                                   ((x ** 7) / 42) + ((x ** 9) / 216))
