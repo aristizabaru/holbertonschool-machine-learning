@@ -26,3 +26,15 @@ class Normal:
             variance = sum([(x - self.mean) ** 2 / n for x in data])
             # σ = √σ²
             self.stddev = variance ** (1/2)
+
+    def z_score(self, x):
+        """docstring - Estandarización de
+        variables aleatorias normales"""
+        # Z = (x - μ) / σ
+        return (x - self.mean) / self.stddev
+
+    def x_value(self, z):
+        """docstring - Estandarización de
+        variables aleatorias normales"""
+        # X = σz + μ
+        return (self.stddev * z) + self.mean
