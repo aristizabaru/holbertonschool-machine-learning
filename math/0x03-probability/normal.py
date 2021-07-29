@@ -61,17 +61,12 @@ class Normal:
 
     def cdf(self, x):
         """docstring"""
+        π = 3.1415926535
         μ = self.mean
         σ = self.stddev
-
-        dividend = x - μ
-        divisor = σ ** (1/2)
-        erf = Normal.erf(divisor / dividend)
-        return (1/2) * (1 + erf)
-
-    @staticmethod
-    def erf(x):
-        """docstring"""
-        π = 3.1415926535
-        return (2 / (π ** 0.5)) * (x - ((x ** 3) / 3) + ((x ** 5) / 10) -
-                                   ((x ** 7) / 42) + ((x ** 9) / 216))
+        quotient = (x - μ) / (σ * (2 ** 0.5))
+        erf = (2 / (π ** 0.5)) * (quotient - ((quotient ** 3) / 3)
+                                  + ((quotient ** 5) / 10)
+                                  - ((quotient ** 7) / 42)
+                                  + ((quotient ** 9) / 216))
+        return ((1/2) * (1 + erf))
