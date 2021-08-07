@@ -118,7 +118,8 @@ class Neuron:
 
         Args:
             X (numpy.ndarray): contains the input data. Shape (nx, m)
-                               'nx' is the number of input features to the neuron
+                               'nx' is the number of input features to
+                               the neuron
                                'm' is the number of examples
             Y (numpy.ndarray): contains the correct labels for the
                                input data. Shape (1, m)
