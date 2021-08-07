@@ -118,7 +118,8 @@ class Neuron:
 
         Args:
             X (numpy.ndarray): contains the input data. Shape (nx, m)
-                               'nx' is the number of input features to the neuron
+                               'nx' is the number of input features
+                               to the neuron
                                'm' is the number of examples
             Y (numpy.ndarray): contains the correct labels for the
                                input data. Shape (1, m)
@@ -166,7 +167,7 @@ class Neuron:
         logistic regression by quantifing the error between
         predicted values and expected values.
 
-        Loss Function: 
+        Loss Function:
             This is the one used in logistic regression to messaure how well
             the model is doing in a single training example
 
@@ -206,11 +207,5 @@ class Neuron:
         Returns:
             numpy.ndarray: the activation values
         """
-        e = 2.7182818285
         # S(x) = 1 / (1 + e^-x)
-        return 1 / (1 + e ** -x)
-        # dz = A - Y
-        # db = (np.sum(dz) / m)
-        # dw = (np.matmul(X, dz.T) / m)
-        # self.__b = self.__b - (alpha * db)
-        # self.__W = self.__W - (alpha * dw).T
+        return 1/(1 + np.exp(-x))
