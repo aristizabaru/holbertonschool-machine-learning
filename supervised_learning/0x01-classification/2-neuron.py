@@ -99,10 +99,3 @@ class Neuron:
         """
         # S(x) = 1 / (1 + e^-x)
         return 1/(1 + np.exp(-x))
-
-    def forward_prop(self, X):
-        """Calculates the forward propagation of the neuron"""
-        Z = np.dot(self.__W, X) + self.__b
-        sigmoid = 1 / (1 + np.exp(-Z))
-        self.__A = sigmoid
-        return self.__A
