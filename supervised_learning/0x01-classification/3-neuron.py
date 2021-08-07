@@ -82,9 +82,8 @@ class Neuron:
         return self.A
 
     def cost(self, Y, A):
-        """calculates the cost of the model using logistic
-        regression by quantifing the error between predicted
-        values and expected values
+        """calculates the cost of the model using logistic regression
+        by quantifing the error between predicted values and expected values
 
         Cost Function
             This function gives the messaure how well
@@ -97,11 +96,10 @@ class Neuron:
             L(ŷ^(i), y^(i) → loss function
 
         Args:
-            Y (numpy.ndarray): contains the correct labels
-                               for the input data. Shape (1, m)
-            A (numpy.ndarray): contains the activated output
-                               of the neuron for each example.
-                               Shape (1, m)
+            Y (numpy.ndarray): contains the correct labels for the
+                               input data. Shape (1, m)
+            A (numpy.ndarray): contains the activated output of the
+                               neuron for each example. Shape (1, m)
 
         Returns:
             float: cost of the model
@@ -114,25 +112,24 @@ class Neuron:
 
     @staticmethod
     def loss(Y, A):
-        """calculates the loss in multiple training example
-        using logistic regression by quantifing the error
-        between predicted values and expected values.
+        """calculates the loss in multiple training example using
+        logistic regression by quantifing the error between
+        predicted values and expected values.
 
-        Loss Function: 
-            This is the one used in logistic regression
-            to messaure how well the model is doing in a
-            single training example
+        Loss Function:
+            This is the one used in logistic regression to messaure how well
+            the model is doing in a single training example
 
-            L(ŷ, y) = y^(i)*log(ŷ^(i)) + (1 - y^(i))*log(1 - ŷ^(i)
+            L(ŷ, y) = y^(i) * log(ŷ^(i)) + (1 - y^(i)) * log(1 - ŷ^(i)
             ŷ → the predicted value of y
             y → correct values
 
-        To avoid division by zero errors, it will be used
-        1.0000001 - A instead of 1 - A
+        To avoid division by zero errors, it will be used 1.0000001 - A
+        instead of 1 - A
 
         Args:
-            Y (numpy.ndarray): contains the correct labels for
-                               the input data. Shape (1, m)
+            Y (numpy.ndarray): contains the correct labels for the
+                               input data. Shape (1, m)
             A (numpy.ndarray): contains the activated output of the
                                neuron for each example. Shape (1, m)
 
