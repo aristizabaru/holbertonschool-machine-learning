@@ -141,7 +141,7 @@ class Neuron:
         logistic regression by quantifing the error between
         predicted values and expected values.
 
-        Loss Function: 
+        Loss Function:
             This is the one used in logistic regression to messaure how well
             the model is doing in a single training example
 
@@ -181,6 +181,5 @@ class Neuron:
         Returns:
             numpy.ndarray: the activation values
         """
-        e = 2.7182818285
         # S(x) = 1 / (1 + e^-x)
-        return 1 / (1 + e ** -x)
+        return 1/(1 + np.exp(-x))
