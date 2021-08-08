@@ -13,9 +13,9 @@ class NeuralNetwork:
         W1 (numpy.ndarray): the weights vector for the hidden layer.
         b1 (numpy.ndarray): the bias for the hidden layer.
         A1 (int): the activated output for the hidden layer.
-        W2 (numpy.ndarray): the weights vector for the output neuron.
-        b2 (int): the bias for the output neuron.
-        A2 (int): the activated output for the output neuron (prediction).
+        W2 (numpy.ndarray): the weights vector for the output layer.
+        b2 (int): the bias for the output layer.
+        A2 (int): the activated output for the output layer (prediction).
 
     Methods:
         __init__(self, nx, nodes): constructor
