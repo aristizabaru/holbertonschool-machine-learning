@@ -21,7 +21,7 @@ class NeuralNetwork:
         __init__(self, nx, nodes): constructor
         forward_prop(self, X):
             calculates the forward propagation of the NN
-        cost(self, Y, A): 
+        cost(self, Y, A):
             calculates the cost of the model using logistic
             regression by quantifing the error between predicted
             values and expected values
@@ -29,7 +29,7 @@ class NeuralNetwork:
     Static Methods
         sigmoid(x):
             calculates sigmoid function to 'x' value.
-        loss(Y, A): 
+        loss(Y, A):
             calculates the loss in multiple training example using
             logistic regression by quantifing the error between
             predicted values and expected values.
