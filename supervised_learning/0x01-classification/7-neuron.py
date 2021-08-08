@@ -261,7 +261,7 @@ class Neuron:
         prediction, cost = self.evaluate(X, Y)
         return prediction, cost
 
-    @ staticmethod
+    @staticmethod
     def loss(Y, A):
         """calculates the loss in multiple training example using
         logistic regression by quantifing the error between
