@@ -19,10 +19,12 @@ class NeuralNetwork:
 
     Methods:
         __init__(self, nx, nodes): constructor
+        forward_prop(self, X):
+            calculates the forward propagation of the NN
 
     Static Methods
         sigmoid(x):
-            calculates sigmoid function to 'x' value
+            calculates sigmoid function to 'x' value.
     """
 
     def __init__(self, nx, nodes):
