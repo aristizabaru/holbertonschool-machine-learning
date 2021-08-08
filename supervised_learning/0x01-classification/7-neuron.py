@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """represents a single neuron performing binary classification"""
-from typing import Type
+
 import numpy as np
 import matplotlib.pyplot as plt
 
