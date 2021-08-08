@@ -186,7 +186,8 @@ class Neuron:
         self.__W = self.W - (alpha * dw).T
         self.__b = self.b - (alpha * db)
 
-    def train(self, X, Y, iterations=5000, alpha=0.05, verbose=True, graph=True, step=100):
+    def train(self, X, Y, iterations=5000, alpha=0.05, verbose=True,
+              graph=True, step=100):
         """Trains the neuron by doing a forward propagation
         and a gradient descent 'iterations' number of times
 
@@ -199,8 +200,8 @@ class Neuron:
             iterations (int, optional): the number of iterations to train over.
                                         Defaults to 5000.
             alpha (float, optional): learning rate. Defaults to 0.05.
-            verbose (bool, optional): defines whether or not to print information
-                            about the training.
+            verbose (bool, optional): defines whether or not to print
+                information about the training.
             graph (bool, optional): defines whether or not to graph information
                                     about the training once the training
                                     has completed
