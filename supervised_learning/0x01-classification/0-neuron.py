@@ -10,6 +10,9 @@ class Neuron:
         W (numpy.ndarray): the weights vector for the neuron
         b (int): the bias for the neuron
         A (int): the activated output of the neuron (prediction)
+
+    Methods:
+        __init__(self, nx): constructor
     """
 
     def __init__(self, nx):

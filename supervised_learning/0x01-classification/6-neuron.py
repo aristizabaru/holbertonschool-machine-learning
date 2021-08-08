@@ -10,6 +10,31 @@ class Neuron:
         W (numpy.ndarray): the weights vector for the neuron
         b (int): the bias for the neuron
         A (int): the activated output of the neuron (prediction)
+
+    Methods:
+        __init__(self, nx):
+            constructor
+        forward_prop(self, X):
+            calculates the forward propagation of the neuron.
+        cost(self, Y, A):
+            calculates the cost of the model using logistic regression
+            by quantifing the error between predicted values and
+            expected values.
+        evaluate(self, X, Y):
+            Evaluates the neuron’s predictions.
+        gradient_descent(self, X, Y, A, alpha=0.05):
+            calculates one pass of gradient descent on the neuron.
+        train(self, X, Y, iterations=5000, alpha=0.05):
+            Trains the neuron by doing a forward propagation and a gradient
+            descent 'iterations' number of times
+
+    Static Methods:
+        loss(Y, A):
+            calculates the loss in multiple training example using logistic
+            regression by quantifing the error between predicted values
+            and expected values.
+        sigmoid(x):
+            calculates sigmoid function to 'x' value.
     """
 
     def __init__(self, nx):

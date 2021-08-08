@@ -10,6 +10,13 @@ class Neuron:
         W (numpy.ndarray): the weights vector for the neuron
         b (int): the bias for the neuron
         A (int): the activated output of the neuron (prediction)
+
+    Methods:
+        __init__(self, nx): constructor
+        forward_prop(self, X): calculates the forward propagation
+                               of the neuron
+    Static Methods:
+        sigmoid(x): calculates sigmoid function to 'x' value
     """
 
     def __init__(self, nx):
