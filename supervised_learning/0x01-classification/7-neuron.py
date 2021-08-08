@@ -291,7 +291,7 @@ class Neuron:
         L = Y * np.log(A) + (1 - Y) * np.log(1.0000001 - A)
         return L
 
-    @ staticmethod
+    @staticmethod
     def sigmoid(x):
         """calculates sigmoid function to 'x' value
 
