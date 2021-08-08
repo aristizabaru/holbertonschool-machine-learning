@@ -218,16 +218,16 @@ class Neuron:
             # gradient descent
             self.gradient_descent(X, Y, self.A, alpha)
             # add values to print
-            if i == 0 or i == iterations or i % step == 0:
+            if i % step == 0:
                 cost = self.cost(Y, self.A)
                 axis_cost.append(cost)
                 axis_iteration.append(i)
                 # print verbose
-                if verbose is True:
+                if verbose:
                     print("Cost after {} iterations: {}".format(i, cost))
 
         # print graph
-        if graph is True:
+        if graph:
             plt.plot(axis_iteration, axis_cost)
             plt.title('Training Cost')
             plt.xlabel('iteration')
