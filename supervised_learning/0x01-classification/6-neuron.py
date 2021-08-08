@@ -202,9 +202,10 @@ class Neuron:
             # gradient descent
             self.gradient_descent(X, Y, self.A, alpha)
 
-        return (self.evaluate(X, Y))
+        prediction, cost = self.evaluate(X, Y)
+        return prediction, cost
 
-    @staticmethod
+    @ staticmethod
     def loss(Y, A):
         """calculates the loss in multiple training example using
         logistic regression by quantifing the error between
@@ -234,7 +235,7 @@ class Neuron:
         L = Y * np.log(A) + (1 - Y) * np.log(1.0000001 - A)
         return L
 
-    @staticmethod
+    @ staticmethod
     def sigmoid(x):
         """calculates sigmoid function to 'x' value
 
