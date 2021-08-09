@@ -233,36 +233,24 @@ class NeuralNetwork:
 
                    tuple[1] → float representing the cost of the model
         """
-        # if not isinstance(iterations, int):
-        #     raise TypeError('iterations must be an integer')
-        # if iterations < 0:
-        #     raise ValueError('iterations must be a positive integer')
-        # if not isinstance(alpha, float):
-        #     raise TypeError('alpha must be a float')
-        # if alpha < 0:
-        #     raise ValueError('alpha must be positive')
-
-        # for _ in range(iterations):
-        #     # forward propagation
-        #     self.forward_prop(X)
-        #     # gradient descent
-        #     self.gradient_descent(X, Y, self.A1, self.A2, alpha)
-
-        # # get output value from evaluation
-        # prediction, cost = self.evaluate(X, Y)
-        # return prediction, cost
-        if type(iterations) is not int:
+        if not isinstance(iterations, int):
             raise TypeError('iterations must be an integer')
         if iterations < 0:
             raise ValueError('iterations must be a positive integer')
-        if type(alpha) is not float:
+        if not isinstance(alpha, float):
             raise TypeError('alpha must be a float')
         if alpha < 0:
             raise ValueError('alpha must be positive')
-        for _ in range(iterations):
-            A1, A2 = self.forward_prop(X)
-            self.gradient_descent(X, Y, A1, A2, alpha)
-        return (self.evaluate(X, Y))
+
+        for _ in range(iterations - 1):
+            # forward propagation
+            self.forward_prop(X)
+            # gradient descent
+            self.gradient_descent(X, Y, self.A1, self.A2, alpha)
+
+        # get output value from evaluation
+        prediction, cost = self.evaluate(X, Y)
+        return prediction, cost
 
     @staticmethod
     def sigmoid(x):
