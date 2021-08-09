@@ -242,7 +242,7 @@ class NeuralNetwork:
         if alpha < 0:
             raise ValueError('alpha must be positive')
 
-        for i in range(iterations):
+        for _ in range(iterations):
             # forward propagation
             self.forward_prop(X)
             # gradient descent
@@ -250,7 +250,7 @@ class NeuralNetwork:
 
         # get output value from evaluation
         prediction, cost = self.evaluate(X, Y)
-        return prediction, cost
+        return (prediction, cost)
 
     @staticmethod
     def sigmoid(x):
