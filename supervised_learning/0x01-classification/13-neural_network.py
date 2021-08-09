@@ -195,11 +195,11 @@ class NeuralNetwork:
         # vectorized logistic regression's gradient descent
         # output layer
         dZ2 = A2 - Y
-        db2 = np.sum(dZ2, axis=1, keepdims=True) / m
+        db2 = np.sum(dZ2, keepdims=True) / m
         dw2 = np.matmul(A1, dZ2.T) / m
         # hidden layer
         dZ1 = np.matmul(self.__W2.T, dZ2) * (A1 * (1 - A1))
-        db1 = np.sum(dZ1, axis=1, keepdims=True) / m
+        db1 = np.sum(dZ1, keepdims=True) / m
         dw1 = np.matmul(X, dZ1.T) / m
         # update weigths and bias with gradient decent values
         self.__W2 = self.W2 - (alpha * dw2).T
