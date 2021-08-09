@@ -177,9 +177,6 @@ class NeuralNetwork:
         return prediction, cost
 
     def gradient_descent(self, X, Y, A1, A2, alpha=0.05):
-        pass
-
-    def gradient_descent(self, X, Y, A1, A2, alpha=0.05):
         """calculates one pass of gradient descent on the neural network.
 
         The derivates are calculated using the vecorization technique.
