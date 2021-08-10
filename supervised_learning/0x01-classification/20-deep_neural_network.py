@@ -20,6 +20,8 @@ class DeepNeuralNetwork:
             calculates the forward propagation of the deep NN.
         cost(self, Y, A):
             calculates the cost of the model.
+        evaluate(self, X, Y):
+            Evaluates the neural network’s predictions.
 
     Static Methods:
         sigmoid(x):
