@@ -3,6 +3,7 @@
 binary classification"""
 
 import numpy as np
+from numpy.lib.arraysetops import isin
 
 
 class DeepNeuralNetwork:
@@ -59,6 +60,9 @@ class DeepNeuralNetwork:
         self.weights["b1"] = np.zeros([layers[0], 1], dtype=float)
         # initialize L2 and L3
         for layer in range(1, self.L):
+            # check if layer is int
+            if not isinstance(layer, int):
+                raise TypeError('layers must be a list of positive integers')
             # He et al method
             # weight = np.random.randn(layer_size[l],layer_size[l-1])
             # *np.sqrt(2/layer_size[l-1])
