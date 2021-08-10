@@ -15,6 +15,8 @@ def one_hot_decode(one_hot):
         numpy.ndarray:
             numeric labels for each example, or None on failure
     """
+    if not isinstance(one_hot, np.ndarray):
+        return None
     # returns the indices of the maximum values along an axis
     one_hot_decode = np.argmax(one_hot, axis=0)
     return one_hot_decode
