@@ -195,11 +195,11 @@ class NeuralNetwork:
         # vectorized logistic regression's gradient descent
         # output layer
         dZ2 = A2 - Y
-        db2 = np.sum(dZ2, keepdims=True) / m
+        db2 = np.sum(dZ2, keepdims=True, axis=1) / m
         dw2 = np.matmul(A1, dZ2.T) / m
         # hidden layer
         dZ1 = np.matmul(self.__W2.T, dZ2) * (A1 * (1 - A1))
-        db1 = np.sum(dZ1, keepdims=True) / m
+        db1 = np.sum(dZ1, keepdims=True, axis=1) / m
         dw1 = np.matmul(X, dZ1.T) / m
         # update weigths and bias with gradient decent values
         self.__W2 = self.W2 - (alpha * dw2).T
@@ -208,7 +208,7 @@ class NeuralNetwork:
         self.__b1 = self.b1 - (alpha * db1)
 
     def train(self, X, Y, iterations=5000, alpha=0.05):
-        """Trains the neuron by doing a forward propagation
+        """Trains the model by doing a forward propagation
         and a gradient descent 'iterations' number of times
 
         Args:
@@ -242,13 +242,12 @@ class NeuralNetwork:
         if alpha < 0:
             raise ValueError('alpha must be positive')
 
-        for _ in range(iterations - 1):
+        for _ in range(iterations):
             # forward propagation
             self.forward_prop(X)
             # gradient descent
             self.gradient_descent(X, Y, self.A1, self.A2, alpha)
 
-        # get output value from evaluation
         prediction, cost = self.evaluate(X, Y)
         return prediction, cost
 
