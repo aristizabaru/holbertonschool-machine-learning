@@ -303,6 +303,8 @@ class DeepNeuralNetwork:
         Args:
             filename (str): file to which the object should be saved
         """
+        if not isinstance(filename, str):
+            return None
         if filename[-4:] != '.pkl':
             filename += '.pkl'
         # open to write bytes
@@ -329,7 +331,7 @@ class DeepNeuralNetwork:
             for key in deep_NN.__dict__:
                 deep_NN.__dict__[key] = deep_attributes[key]
             return deep_NN
-        except FileNotFoundError:
+        except Exception:
             return None
 
     @staticmethod
