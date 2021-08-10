@@ -24,5 +24,5 @@ def one_hot_encode(Y, classes):
     try:
         one_hot_encode = np.eye(classes)[Y]
         return one_hot_encode.T
-    except:
+    except Exception:
         return None
