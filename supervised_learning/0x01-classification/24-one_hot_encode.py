@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """one_hot_encode module"""
 
+from os import nice
 from matplotlib.pyplot import cla
 import numpy as np
 
@@ -20,9 +21,9 @@ def one_hot_encode(Y, classes):
             or None on failure
     """
     if not isinstance(Y, np.ndarray):
-        raise Exception
+        return None
     if not isinstance(classes, int):
-        raise Exception
+        return None
     try:
         one_hot_encode = np.eye(classes)[Y].T
         return one_hot_encode
