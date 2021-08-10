@@ -25,6 +25,9 @@ class DeepNeuralNetwork:
         gradient_descent(self, Y, cache, alpha=0.05):
             calculates one pass of gradient descent on
             the neural network.
+        train(self, X, Y, iterations=5000, alpha=0.05):
+            Trains the model by doing a forward propagation
+            and a gradient descent 'iterations' number of times
 
     Static Methods:
         sigmoid(x):
