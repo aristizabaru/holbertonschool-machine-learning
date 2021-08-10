@@ -17,7 +17,7 @@ def one_hot_decode(one_hot):
     """
     if not isinstance(one_hot, np.ndarray):
         return None
-    if np.sum(one_hot) > len(one_hot):
+    if np.sum(one_hot) > len(one_hot.T):
         return None
     # returns the indices of the maximum values along an axis
     try:
