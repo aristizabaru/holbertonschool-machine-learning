@@ -22,6 +22,9 @@ class DeepNeuralNetwork:
             calculates the cost of the model.
         evaluate(self, X, Y):
             Evaluates the neural network’s predictions.
+        gradient_descent(self, Y, cache, alpha=0.05):
+            calculates one pass of gradient descent on
+            the neural network.
 
     Static Methods:
         sigmoid(x):
