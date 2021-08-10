@@ -20,10 +20,11 @@ def one_hot_encode(Y, classes):
             or None on failure
     """
     if not isinstance(Y, np.ndarray):
-        return None
-    if len(Y.shape) > 1:
-        return None
+        raise Exception
     if not isinstance(classes, int):
+        raise Exception
+    try:
+        one_hot_encode = np.eye(classes)[Y].T
+        return one_hot_encode
+    except Exception:
         return None
-    one_hot_encode = np.eye(classes)[Y].T
-    return one_hot_encode
