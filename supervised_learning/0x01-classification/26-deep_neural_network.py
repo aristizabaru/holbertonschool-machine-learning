@@ -273,7 +273,7 @@ class DeepNeuralNetwork:
             if step < 0 or step > iterations:
                 raise ValueError('step must be positive and <= iterations')
 
-        for i in range(iterations):
+        for i in range(iterations + 1):
             # forward propagation
             A, _ = self.forward_prop(X)
             # gradient descent
