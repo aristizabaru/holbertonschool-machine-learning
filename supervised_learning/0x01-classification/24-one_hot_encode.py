@@ -21,5 +21,8 @@ def one_hot_encode(Y, classes):
     """
     # if len(Y) == 0 or not isinstance(classes, int) or classes < 1:
     #     return None
-    one_hot_encode = np.eye(classes)[Y]
-    return one_hot_encode.T
+    try:
+        one_hot_encode = np.eye(classes)[Y]
+        return one_hot_encode.T
+    except:
+        return None
