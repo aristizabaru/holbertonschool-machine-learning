@@ -61,7 +61,7 @@ class DeepNeuralNetwork:
         # initialize L2 and L3
         for layer in range(1, self.L):
             # check if layer is int
-            if not isinstance(layer, int):
+            if not isinstance(layers[layer], int):
                 raise TypeError('layers must be a list of positive integers')
             # He et al method
             # weight = np.random.randn(layer_size[l],layer_size[l-1])
