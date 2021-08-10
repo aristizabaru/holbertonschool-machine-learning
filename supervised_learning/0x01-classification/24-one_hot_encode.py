@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 """one_hot_encode module"""
 
-from os import nice
-from matplotlib.pyplot import cla
 import numpy as np
 
 
