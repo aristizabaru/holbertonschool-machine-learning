@@ -155,7 +155,7 @@ class DeepNeuralNetwork:
         J = -(1/m) * np.sum(type(self).loss(Y, A))
         return J
 
-    @ staticmethod
+    @staticmethod
     def sigmoid(x):
         """calculates sigmoid function to 'x' value
 

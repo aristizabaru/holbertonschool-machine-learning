@@ -185,7 +185,7 @@ class DeepNeuralNetwork:
 
         return prediction, cost
 
-    @ staticmethod
+    @staticmethod
     def sigmoid(x):
         """calculates sigmoid function to 'x' value
 

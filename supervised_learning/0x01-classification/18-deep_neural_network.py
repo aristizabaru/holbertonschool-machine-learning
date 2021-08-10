@@ -122,7 +122,7 @@ class DeepNeuralNetwork:
         # (output deep NN, cache all layers)
         return self.cache['A{}'.format(self.L)], self.cache
 
-    @ staticmethod
+    @staticmethod
     def sigmoid(x):
         """calculates sigmoid function to 'x' value
 
