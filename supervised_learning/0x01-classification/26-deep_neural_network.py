@@ -303,9 +303,7 @@ class DeepNeuralNetwork:
         Args:
             filename (str): file to which the object should be saved
         """
-        if not isinstance(filename, str):
-            return None
-        if filename[-4:] != '.pkl':
+        if not filename.endswith('.pkl'):
             filename += '.pkl'
         # open to write bytes
         with open(filename, 'wb') as file:
