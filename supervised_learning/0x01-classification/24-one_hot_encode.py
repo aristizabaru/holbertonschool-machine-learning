@@ -22,6 +22,12 @@ def one_hot_encode(Y, classes):
         return None
     if not isinstance(classes, int):
         return None
+    # classes is smaller than largest element in Y
+    if classes < np.amax(Y, axis=0):
+        return None
+    # classes is less than 2
+    if classes < 2:
+        return None
 
     one_hot_encode = np.eye(classes)[Y].T
     return one_hot_encode
