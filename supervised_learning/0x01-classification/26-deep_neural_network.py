@@ -52,7 +52,7 @@ class DeepNeuralNetwork:
                     *np.sqrt(2/layer_size[l-1])
 
         Args:
-            nx (int): number of input features.
+            nx (int): number of input features. size of layer 0.
             layers (list):
                 represents the number of nodes in each
                 layer of the network
@@ -81,7 +81,7 @@ class DeepNeuralNetwork:
         # bias (float of zero's x # neurons of the layer)
         self.__weights['b1'] = np.zeros([layers[0], 1], dtype=float)
         # initialize L2 and L3
-        for layer in range(1, self.L):
+        for layer in range(1, self.__L):
             # check if layer[layer] in list is integer
             if layers[layer] < 1 or not isinstance(layers[layer], int):
                 raise TypeError('layers must be a list of positive integers')
