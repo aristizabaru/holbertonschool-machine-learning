@@ -131,9 +131,14 @@ class DeepNeuralNetwork:
         self.__cache['A0'] = X
         # calculate An (i == layer)
         for i in range(1, self.L + 1):
-            Y = np.dot(self.weights['W{}'.format(i)], self.cache['A{}'.format(
+            Z = np.dot(self.weights['W{}'.format(i)], self.cache['A{}'.format(
                 i - 1)]) + self.weights['b{}'.format(i)]
-            self.__cache['A{}'.format(i)] = type(self).sigmoid(Y)
+            # look if the output is the last layer
+            if i == self.__L - 1:
+                # use softmax to be probabilistically accurate
+                self.__cache['A{}'.format(i)] = type(self).softmax(Z)
+            else:
+                self.__cache['A{}'.format(i)] = type(self).sigmoid(Z)
         # (output deep NN, cache all layers)
         return self.cache['A{}'.format(self.L)], self.cache
 
@@ -141,19 +146,17 @@ class DeepNeuralNetwork:
         """calculates the cost of the model using logistic regression
         by quantifing the error between predicted values and expected values
 
-        Cost Function
+        cost function for softmax activation
             This function gives the messaure how well
             the model is doing in the entire training set
 
-            J(ŷ, y) = -(1/m) * Σ L(ŷ^(i), y^(i))
+            J(ŷ, y) = -(1/m) * Σ ŷ * log(y)
             ŷ → the predicted value of y
             y → correct values
             m → # of examples of the training set
-            L(ŷ^(i), y^(i) → loss function
 
         Args:
-            Y (numpy.ndarray): contains the correct labels for the
-                               input data. Shape (1, m)
+            Y (numpy.ndarray): one-hot numpy.ndarray of shape (classes, m)
             A (numpy.ndarray): contains the activated output of the
                                neuron for each example. Shape (1, m)
 
@@ -162,8 +165,8 @@ class DeepNeuralNetwork:
         """
         m = Y.shape[1]
 
-        # J(ŷ, y) = -(1/m) * Σ L(ŷ^(i), y^(i))
-        J = -(1/m) * np.sum(type(self).loss(Y, A))
+        # J(ŷ, y) = -(1/m) * Σ ŷ * log(y)
+        J = -(1/m) * np.sum(Y * np.log(A))
         return J
 
     def evaluate(self, X, Y):
@@ -189,8 +192,9 @@ class DeepNeuralNetwork:
         self.forward_prop(X)
         # output layer
         A = self.cache['A{}'.format(self.L)]
+        tmp = np.amax(A, axis=0)
         cost = self.cost(Y, A)
-        prediction = np.where(A <= 0.5, 0, 1)
+        prediction = np.where(A == tmp, 1, 0)
 
         return prediction, cost
 
@@ -346,6 +350,19 @@ class DeepNeuralNetwork:
         return 1/(1 + np.exp(-x))
 
     @staticmethod
+    def softmax(z):
+        """calculates softmax function to 'z' value
+
+        Args:
+            z (numpy.ndarray): contains the output vector
+
+        Returns:
+            numpy.ndarray: the activation values
+        """
+        softmax = np.exp(z) / np.sum(np.exp(z), axis=0, keepdims=True)
+        return softmax
+
+    @staticmethod
     def loss(Y, A):
         """calculates the loss in multiple training example using
         logistic regression by quantifing the error between
@@ -374,23 +391,3 @@ class DeepNeuralNetwork:
         # L(ŷ, y) = y^(i) * log(ŷ^(i)) + (1 - y^(i)) * log(1 - ŷ^(i)
         L = Y * np.log(A) + (1 - Y) * np.log(1.0000001 - A)
         return L
-
-    @staticmethod
-    def one_hot_decode(one_hot):
-        """converts a one-hot matrix into a vector of label
-
-        Args:
-            one_hot (numpy.ndarray):
-                one-hot encoded numpy.ndarray with shape (classes, m)
-
-        Returns:
-            numpy.ndarray:
-                numeric labels for each example, or None on failure
-        """
-        if not isinstance(one_hot, np.ndarray):
-            return None
-        if len(one_hot.shape) != 2:
-            return None
-        # returns the indices of the maximum values along an axis
-        one_hot_decode = np.argmax(one_hot, axis=0)
-        return one_hot_decode
