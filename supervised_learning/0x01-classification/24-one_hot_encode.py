@@ -22,8 +22,6 @@ def one_hot_encode(Y, classes):
         return None
     if not isinstance(classes, int):
         return None
-    try:
-        one_hot_encode = np.eye(classes)[Y].T
-        return one_hot_encode
-    except Exception:
-        return None
+
+    one_hot_encode = np.eye(classes)[Y].T
+    return one_hot_encode
