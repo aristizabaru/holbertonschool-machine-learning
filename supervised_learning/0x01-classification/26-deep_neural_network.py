@@ -309,7 +309,7 @@ class DeepNeuralNetwork:
             filename += '.pkl'
         # open to write bytes
         with open(filename, 'wb') as file:
-            pickle.dump(self.__dict__, file)
+            pickle.dump(self, file)
 
     @staticmethod
     def load(filename):
@@ -324,13 +324,7 @@ class DeepNeuralNetwork:
         try:
             # opent to read bytes
             with open(filename, 'rb') as file:
-                deep_attributes = pickle.load(file)
-            # <class 'dict'> -> <class 'DeepNeuralNetwork'>
-            dummy_layers = [5, 3, 1]
-            deep_NN = DeepNeuralNetwork(1, dummy_layers)
-            for key in deep_NN.__dict__:
-                deep_NN.__dict__[key] = deep_attributes[key]
-            return deep_NN
+                return pickle.load(file)
         except Exception:
             return None
 
