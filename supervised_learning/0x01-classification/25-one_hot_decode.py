@@ -17,7 +17,7 @@ def one_hot_decode(one_hot):
     """
     if not isinstance(one_hot, np.ndarray):
         return None
-    if np.amax(one_hot, axis=0) == 0 or np.amax(one_hot, axis=0) > 1:
+    if np.amax(one_hot, axis=0) == 0:
         return None
     # returns the indices of the maximum values along an axis
     one_hot_decode = np.argmax(one_hot, axis=0)
