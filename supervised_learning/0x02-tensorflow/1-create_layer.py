@@ -18,9 +18,11 @@ def create_layer(prev, n, activation):
         tensorflow.python.framework.ops.Tensor:
             tensor output of the layer
     """
+    # implement He et. al initialization for the layer weights
     he_et_al = tf.contrib.layers.variance_scaling_initializer(mode="FAN_AVG")
+    # create model object
     model = tf.layers.Dense(units=n,
                             activation=activation,
                             kernel_initializer=he_et_al,
                             name='layer')
-    return model(prev)
+    return model.apply(prev)
