@@ -26,7 +26,7 @@ def calculate_accuracy(y, y_pred):
     # new vector with the indexes of the correct asnwers
     correct_answers = tf.argmax(y, 1)
     # new vector with the indexes of the predicted asnwers
-    predicted_answers = tf.argmax(y, 1)
+    predicted_answers = tf.argmax(y_pred, 1)
     # evaluate if both answers match (true/false)
     predictions = tf.equal(correct_answers, predicted_answers)
     # compute the mean of the predictions vector
