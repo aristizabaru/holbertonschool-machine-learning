@@ -16,8 +16,7 @@ def calculate_accuracy(y, y_pred):
         tensorflow.python.framework.ops.Tensor:
              tensor containing the decimal accuracy of the prediction
     """
-    # accuracy = correct_predictions / all_predictions
-    accuracy = tf.divide(y, y_pred)
+    equality = tf.equal(y, y_pred),
     # Computes the mean of elements across dimensions of a tensor
-    mean = tf.reduce_mean(tf.cast(accuracy, tf.float32))
+    mean = tf.reduce_mean(tf.cast(equality, 'float32'))
     return mean
